@@ -1,7 +1,10 @@
 # application/services/update_scheduler.py
+import logging
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from datetime import datetime, timedelta, date
 from application.container import Container
+
+logger = logging.getLogger(__name__)
 
 class UpdateScheduler:
     def __init__(self, api, cache, limiter, push, bot):
@@ -35,6 +38,9 @@ class UpdateScheduler:
     async def morning_update(self):
         await self._update_days(-1, 0, 1)
         await self._update_yesterday_details()
+        await self.push_service.send_morning_digest()
+
+        logger.info("Ранкове оновлення та надсилання дайджесту завершено")
 
     async def _update_days(self, *offsets):
         repo = Container.get().repo
@@ -65,7 +71,7 @@ class UpdateScheduler:
         for match in matches:
             try:
                 updated_match = await details_service.ensure_details(match)
-                if updated_match != match:  # Якщо щось змінилось
+                if updated_match != match:
                     updated_count += 1
                 print(f"✅ UPDATED DETAILS for match {match.fixture_id}")
             except Exception as e:

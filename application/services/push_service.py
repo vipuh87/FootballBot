@@ -2,9 +2,11 @@
 import json
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
-from typing import Dict
+from typing import Dict, List
 
 from aiogram import Bot
+import asyncio
+import logging
 
 from presentation.views.push import render_reminder_text
 from config import (
@@ -17,13 +19,16 @@ from config import (
 from data.selected_teams import SELECTED_TEAM_IDS
 from application.services.players_service import get_ukrainian_players_for_match
 
-
+logger = logging.getLogger(__name__)
 REM_PATH = Path(REMINDERS_FILE)
 
 class PushService:
+    push_targets: List[Dict[str, int]]
+
     def __init__(self, bot: Bot):
         self.bot = bot
         self.sent = self._load_sent()
+        self.push_targets = PUSH_TARGETS
 
     def _load_sent(self) -> Dict:
         if REM_PATH.exists():
@@ -123,3 +128,23 @@ class PushService:
                 )
             except Exception as e:
                 print(f"❌ Помилка надсилання в {target['chat_id']}: {e}")
+
+    async def send_morning_digest(self):
+        """Надсилає ранковий дайджест з новинами за вчора + головна клавіатура"""
+        from presentation.views.digest_view import render_main_digest  # імпорт тут, щоб уникнути циклічного імпорту
+
+        text, kb = await render_main_digest()
+
+        for target in self.push_targets:
+            chat_id = target["chat_id"]
+            try:
+                await self.bot.send_message(
+                    chat_id=chat_id,
+                    text=text,
+                    reply_markup=kb,
+                    parse_mode="HTML",
+                    disable_web_page_preview=True
+                )
+                await asyncio.sleep(0.1)
+            except Exception as e:
+                logger.error(f"Не вдалося надіслати дайджест в {chat_id}: {e}")
