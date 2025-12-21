@@ -3,16 +3,10 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import InlineKeyboardMarkup
 
 from application.container import Container
-
+from presentation.keyboards.main_menu import get_main_menu_kb
 
 async def render_main_digest() -> tuple[str, InlineKeyboardMarkup]:
     service = Container.get().digest
     text = await service.generate_yesterday_digest()
 
-    builder = InlineKeyboardBuilder()
-    builder.button(text="Команди", callback_data="teams")
-    builder.button(text="До Матчів", callback_data="to_matches")
-    builder.button(text="Гравці", callback_data="players")
-    builder.adjust(3)
-
-    return text, builder.as_markup()
+    return text, get_main_menu_kb()
