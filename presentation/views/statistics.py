@@ -1,18 +1,18 @@
 # presentation/views/statistics.py
-from presentation.views.keyboards import single_back_keyboard
+from presentation.keyboards.main_menu import get_single_back_keyboard
 from data.icons import ICONS
 from data.statistics_translations import STATS_TRANSLATIONS
 
 
 def render_stats(statistics: list, fid: int):
     if not statistics or len(statistics) < 2:
-        return f"{ICONS['warning']} Статистика відсутня", single_back_keyboard(f"detail:{fid}")
+        return f"{ICONS['warning']} Статистика відсутня", get_single_back_keyboard(f"detail:{fid}")
 
     stats_home = statistics[0]
     stats_away = statistics[1]
 
     if not stats_home or not stats_away:
-        return f"{ICONS['warning']} Статистика поки недоступна", single_back_keyboard(f"detail:{fid}")
+        return f"{ICONS['warning']} Статистика поки недоступна", get_single_back_keyboard(f"detail:{fid}")
 
     team_home = stats_home.get("team", {}).get("name", "Команда 1")
     team_away = stats_away.get("team", {}).get("name", "Команда 2")
@@ -57,4 +57,4 @@ def render_stats(statistics: list, fid: int):
     header = f"<b>Статистика матчу</b>\n\n"
     full_text = header + table_text
 
-    return full_text, single_back_keyboard(f"detail:{fid}")
+    return full_text, get_single_back_keyboard(f"detail:{fid}")

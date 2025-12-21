@@ -1,4 +1,4 @@
-# presentation/controllers/teams.py
+# presentation/controllers/teams_router.py
 from aiogram import Router
 from aiogram.types import CallbackQuery
 from aiogram.fsm.context import FSMContext

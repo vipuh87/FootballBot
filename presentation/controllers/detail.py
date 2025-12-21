@@ -9,7 +9,7 @@ from presentation.states import BotStates
 from presentation.views.match_details import render_match_details
 from presentation.views.events import render_events
 from presentation.views.statistics import render_stats
-from presentation.views.keyboards import match_detail_keyboard
+from presentation.keyboards.match_details import get_match_details_kb
 from data.icons import ICONS
 from utils.common import safe_edit
 
@@ -35,7 +35,7 @@ async def cb_detail(c: CallbackQuery, state: FSMContext):
     await state.update_data(fixture_id=fid, day_offset=day_offset)
 
     text, _ = render_match_details(match)
-    kb = match_detail_keyboard(fid)  # З keyboards.py
+    kb = get_match_details_kb(fid)  # З keyboards.py
 
     await safe_edit(c, text, kb, parse_mode="HTML")
 

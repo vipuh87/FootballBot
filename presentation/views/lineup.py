@@ -1,10 +1,11 @@
 # presentation/views/lineup.py
-from presentation.views.keyboards import lineup_team_choice_keyboard, single_back_keyboard
+from presentation.keyboards.main_menu import get_single_back_keyboard
+from presentation.keyboards.match_details import get_lineups_kb
 from data.icons import ICONS
 
 
 def render_lineup_menu(fid: int, team1: str, team2: str):
-    return "👥 <b>Оберіть склад команди:</b>", lineup_team_choice_keyboard(fid, team1, team2)
+    return "👥 <b>Оберіть склад команди:</b>", get_lineups_kb(fid, team1, team2)
 
 
 def render_lineup(team_name: str, coach: str, start_xi: list, subs: list) -> tuple:
@@ -28,4 +29,4 @@ def render_lineup(team_name: str, coach: str, start_xi: list, subs: list) -> tup
         number = player.get("number", "")
         text += f"{i}. {name} {number}\n"
 
-    return text, single_back_keyboard()
+    return text, get_single_back_keyboard(team_name)

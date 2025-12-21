@@ -1,5 +1,5 @@
 # presentation/views/players.py
-from presentation.views.keyboards import single_back_keyboard
+from presentation.keyboards.main_menu import get_single_back_keyboard
 
 
 def html_escape(text: str) -> str:
@@ -32,4 +32,4 @@ def render_players(teams: list):
     if not found:
         text += "⚠️ Немає гравців для відображення"
 
-    return text, single_back_keyboard("back_to_digest")
+    return text, get_single_back_keyboard("back_to_digest")

@@ -1,4 +1,3 @@
-# presentation/controllers/main_menu.py
 from datetime import date, timedelta
 
 from aiogram import Router
