@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from config import BOT_TOKEN
 
-from presentation import all_routers
+from presentation.routers import all_routers
 from application.container import Container
 from application.services.update_scheduler import UpdateScheduler
 
