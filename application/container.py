@@ -1,0 +1,53 @@
+# application/container.py
+from aiogram import Bot
+
+from application.api.api_client import ApiClient
+from application.services.cache_service import CacheService
+from application.services.match_repository import MatchRepository
+from application.services.rate_limiter import RateLimiterService
+from application.services.push_service import PushService
+from application.services.news_digest_service import NewsDigestService
+from application.services.match_details_service import MatchDetailsService
+from application.services.ukrainian_player_performance_service import UkrainianPlayerPerformanceService
+from config import USE_REDIS, REDIS_URL
+
+from infrastructure.storage.json_adapter import JsonCacheAdapter
+from infrastructure.storage.redis_adapter import RedisCacheAdapter
+import redis.asyncio as redis
+
+class Container:
+    _instance = None
+
+    def __init__(self, bot: Bot):
+        self.bot = bot
+        self.api = ApiClient()
+
+        if USE_REDIS:
+            redis_client = redis.from_url(
+                REDIS_URL,
+                encoding="utf-8",
+                decode_responses=True
+            )
+            adapter = RedisCacheAdapter(redis_client)
+        else:
+            adapter = JsonCacheAdapter()
+
+        self.cache = CacheService(adapter)
+        self.repo = MatchRepository(self.cache)
+        self.limiter = RateLimiterService(self.api)
+        self.push = PushService(bot)
+        self.player_performance = UkrainianPlayerPerformanceService()  # спочатку
+        self.digest = NewsDigestService(self.repo, self.player_performance)  # потім передаємо
+        self.match_details = MatchDetailsService(self.repo, self.api)
+
+    @classmethod
+    def init(cls, bot: Bot):
+        if cls._instance is not None:
+            raise RuntimeError("Container вже ініціалізовано")
+        cls._instance = cls(bot)
+
+    @classmethod
+    def get(cls):
+        if cls._instance is None:
+            raise RuntimeError("Container не ініціалізовано!")
+        return cls._instance

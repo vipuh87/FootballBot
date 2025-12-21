@@ -1,0 +1,30 @@
+# PyCharm / IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Logs and DB
+*.log
+*.sqlite*
+*.db
+
+# Temp
+*.tmp
+.tmp.*
+
+# OS
+Thumbs.db
+.DS_Store

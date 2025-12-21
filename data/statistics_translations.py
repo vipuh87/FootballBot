@@ -1,0 +1,23 @@
+# data/statistics_translations.py
+STATS_TRANSLATIONS = {
+    "Total Shots": "Удари всього",
+    "Shots on Goal": "Удари в площину",
+    "Shots off Goal": "Удари повз ворота",
+    "Blocked Shots": "Заблоковані удари",
+    "Ball Possession": "Володіння м'ячем",
+    "Passes": "Паси",
+    "Pass Accuracy": "Точність пасів",
+    "Fouls": "Фоли",
+    "Yellow Cards": "Жовті картки",
+    "Red Cards": "Червоні картки",
+    "Offsides": "Офсайди",
+    "Corner Kicks": "Кутові",
+    "Goalkeeper Saves": "Сейви воротаря",
+    "Shots insidebox": "з меж штрафної",
+    "Shots outsidebox": "з-за меж штрафної",
+    "Total passes": "Кількість пасів",
+    "Passes accurate": "Точні паси",
+    "Passes %": "Точність пасів %",
+    "expected_goals": "Очікувані голи",
+    "goals_prevented": "Запобігнуті голи",
+}
