@@ -10,7 +10,6 @@ from presentation.views.formatters import (
 from config import TZ_UKRAINE, TZ_ITALY
 from data.icons import ICONS
 
-
 def render_reminder_text(match, ua_info):
     when = format_match_time(match)
     home = highlight_team(match.home)
@@ -18,57 +17,51 @@ def render_reminder_text(match, ua_info):
 
     text = (
         f"{ICONS['megaphone']} <b>{random_match_is_soon_phrase()}</b>\n\n"
-        f"{home} {ICONS['vs']} {away}\n"
+        f"{home} {ICONS["vs"]} {away}\n"
         f"{ICONS['rocket']} Початок: {when}\n\n"
+        f"{render_ukrainian_players_block(ua_info)}\n"
+        f"Матч почнеться менше ніж через 15 хв."
     )
+    return text
 
+def render_ukrainian_players_block(ua_info: list) -> str:
     if not ua_info:
-        # Для українських клубів — просто базовий текст без блоку гравців
-        return text + "Удачі в матчі! ⚽"
+        return ""
 
-    lines = ["<b>Українські гравці:</b>"]
+    lines = [f"{ICONS['ua_flag']} <b>Українці у матчі:</b>"]
 
-    has_any_in_squad = False  # Для перевірки, чи є хоч один у заявці
+    for team in ua_info:
+        team_name = team.get("team_name", "—")
+        start = team.get("start", [])
+        subs = team.get("subs", [])
 
-    for info in ua_info:
-        player = info["name"]
-        team_name = info["team"]
-        start = info.get("start")
-        subs = info.get("sub")
+        # ✅ Якщо взагалі нікого немає
+        if not start and not subs:
+            lines.append(random_no_players_phrase(team_name))
+            continue
 
-        if start or subs:
-            has_any_in_squad = True
+        # ✅ Назва команди
+        lines.append(f"\n🏟 <b>{team_name}</b>:")
 
-        # Назва команди (один раз на команду)
-        if lines[-1] != f"\n🏟 <b>{team_name}</b>:":
-            lines.append(f"\n🏟 <b>{team_name}</b>:")
-
-        # Старт
+        # ✅ Старт
         if start:
             if len(start) == 1:
                 names = start[0]["name"]
             else:
                 names = ", ".join(p["name"] for p in start)
+
             lines.append(f"✅ <b>У стартовому складі є:</b> {names}")
 
-        # Лавка
+        # ✅ Лавка
         if subs:
             if len(subs) == 1:
                 names = subs[0]["name"]
             else:
                 names = ", ".join(p["name"] for p in subs)
+
             lines.append(f"🪑 <b>На лавці:</b> {names}")
 
-    # Якщо всі українці не в заявці — дотепна фраза
-    if not has_any_in_squad and ua_info:
-        team_name = ua_info[0]["team"]  # Беремо першу команду
-        lines.append("")
-        lines.append(random_no_players_phrase(team_name))
-
-    text += "\n\n".join(lines) + "\n\nУдачі в матчі! ⚽"
-
-    return text
-
+    return "\n\n".join(lines)
 
 def render_last_update_text(last_update: datetime | None):
 

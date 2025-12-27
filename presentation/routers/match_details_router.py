@@ -1,29 +1,27 @@
-# presentation/routers/match_detail_router.py
-
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 
 from application.container import Container
+from application.services.lineup_service import get_home_lineup, get_away_lineup
 
 # Views для рендеру
 from presentation.views.events import render_events
 from presentation.views.statistics import render_stats
-from presentation.views.lineup import render_lineup
-from presentation.views.players import render_players
 from presentation.views.match_details import render_match_details
+from presentation.keyboards.match_details import get_lineups_kb
+from presentation.views.lineup import render_lineup
 
 # Keyboards
 from presentation.keyboards.match_details import get_match_details_kb
 
-# Якщо є окремі клавіатури для подій/статистики — імпортуй їх тут
 
 router = Router(name="match_detail_router")
 
 
 # Події матчу
-@router.callback_query(F.data.startswith("events_"))
+@router.callback_query(F.data.startswith("events:"))
 async def show_events(callback: CallbackQuery):
-    fixture_id = int(callback.data.split("_")[1])
+    fixture_id = int(callback.data.split(":")[1])
 
     repo = Container.get().repo
     match = await repo.find_match_by_id(fixture_id)
@@ -32,18 +30,16 @@ async def show_events(callback: CallbackQuery):
         await callback.answer("Події ще не доступні або матч не завершений", show_alert=True)
         return
 
-    text = render_events(match)  # твоя view-функція для подій
-    # Клавіатура з back до деталей
-    kb = get_match_details_kb(match)  # або окрема з кнопкою "Назад до деталей"
+    text, kb = render_events(match.events, fixture_id)
 
     await callback.message.edit_text(text, reply_markup=kb, parse_mode="HTML")
     await callback.answer()
 
 
 # Статистика матчу
-@router.callback_query(F.data.startswith("stats_"))
+@router.callback_query(F.data.startswith("stats:"))
 async def show_statistics(callback: CallbackQuery):
-    fixture_id = int(callback.data.split("_")[1])
+    fixture_id = int(callback.data.split(":")[1])
 
     repo = Container.get().repo
     match = await repo.find_match_by_id(fixture_id)
@@ -52,17 +48,15 @@ async def show_statistics(callback: CallbackQuery):
         await callback.answer("Статистика ще не доступна", show_alert=True)
         return
 
-    text = render_stats(match)
-    kb = get_match_details_kb(match)
+    text, kb = render_stats(match.statistics, fixture_id)
 
     await callback.message.edit_text(text, reply_markup=kb, parse_mode="HTML")
     await callback.answer()
 
-
-# Склади — головний вхід (можливо кнопка "Склади")
-@router.callback_query(F.data.startswith("lineups_"))
+#Склади команд
+@router.callback_query(F.data.startswith("lineups:"))
 async def show_lineups_overview(callback: CallbackQuery):
-    fixture_id = int(callback.data.split("_")[1])
+    fixture_id = int(callback.data.split(":")[1])
 
     repo = Container.get().repo
     match = await repo.find_match_by_id(fixture_id)
@@ -71,43 +65,34 @@ async def show_lineups_overview(callback: CallbackQuery):
         await callback.answer("Склади ще не доступні", show_alert=True)
         return
 
-    # Можна показати короткий огляд обох складів або кнопки на home/away
     text = "Оберіть команду для перегляду складу:"
-    # kb з кнопками "🏠 {home} склад", "✈️ {away} склад", back
-    # Або відразу показати обидва — залежить від твоєї view
 
-    await callback.message.edit_text(text, reply_markup=some_lineups_kb(match))
+    await callback.message.edit_text(text, reply_markup=get_lineups_kb(fixture_id, match.home, match.away), parse_mode="HTML")
     await callback.answer()
 
+@router.callback_query(F.data.startswith("lineup:home:") | F.data.startswith("lineup:away:"))
+async def show_team_lineup(callback: CallbackQuery):
+    parts = callback.data.split(":")
+    side = parts[1]  # "home" або "away"
+    fixture_id = int(parts[2])
 
-# Склад домашньої команди
-@router.callback_query(F.data.startswith("lineup_home_"))
-async def show_home_lineup(callback: CallbackQuery):
-    fixture_id = int(callback.data.split("_")[2])
-    # логіка аналогічна, рендер render_lineup(match, home=True)
-    pass  # заповни за аналогією
+    repo = Container.get().repo
+    match = await repo.find_match_by_id(fixture_id)
 
+    if not match or not match.lineups:
+        await callback.answer("Склади ще не доступні", show_alert=True)
+        return
 
-# Склад гостьової команди
-@router.callback_query(F.data.startswith("lineup_away_"))
-async def show_away_lineup(callback: CallbackQuery):
-    pass
+    lineup_data = get_home_lineup(match) if side == "home" else get_away_lineup(match)
+    if not lineup_data:
+        await callback.answer(f"Склад {side} команди недоступний", show_alert=True)
+        return
 
+    result = render_lineup(lineup_data, fixture_id)
+    text, kb = result if isinstance(result, tuple) else (result, get_match_details_kb(fixture_id))
 
-# Українські гравці в матчі (якщо є окрема кнопка)
-@router.callback_query(F.data.startswith("ukr_players_"))
-async def show_ukrainian_players(callback: CallbackQuery):
-    fixture_id = int(callback.data.split("_")[2])
-
-    match = await Container.get().repo.find_match_by_id(fixture_id)
-    ua_info = await Container.get().players_service.get_ukrainian_players_for_match(match)  # або твій сервіс
-
-    text = render_ukrainian_players(match, ua_info)  # твоя view
-    kb = get_match_details_kb(match)
-
-    await callback.message.edit_text(text, reply_markup=kb)
+    await callback.message.edit_text(text, reply_markup=kb, parse_mode="HTML")
     await callback.answer()
-
 
 # Універсальний back до базових деталей матчу
 @router.callback_query(F.data.startswith("detail_") | F.data == "back_to_detail")

@@ -32,4 +32,4 @@ def render_players(teams: list):
     if not found:
         text += "⚠️ Немає гравців для відображення"
 
-    return text, get_single_back_keyboard("back_to_digest")
+    return text, get_single_back_keyboard("main_menu")

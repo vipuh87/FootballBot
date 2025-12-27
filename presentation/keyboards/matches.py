@@ -20,7 +20,7 @@ def get_day_kb(day: date, current_day_offset: int = 0) -> InlineKeyboardMarkup:
 
     # Кнопка оновлення
     builder.row(
-        InlineKeyboardButton(text=f"{ICONS['refresh']} Оновити", callback_data=f"refresh:{day.isoformat()}")
+        InlineKeyboardButton(text="⬅️ Назад", callback_data="main_menu")
     )
 
     return builder.as_markup()
@@ -31,6 +31,6 @@ def get_match_card_kb(match: Match) -> list[InlineKeyboardButton]:
     return [
         InlineKeyboardButton(
             text=f"{ICONS['match']} {match.home} — {match.away}",
-            callback_data=f"detail:{match.fixture_id}"
+            callback_data=f"match_detail:{match.fixture_id}"
         )
     ]

@@ -11,4 +11,4 @@ def render_teams(teams):
     for team in teams:
         text += f"• {team[1].get('name')}\n"
 
-    return text, get_single_back_keyboard("back_to_digest")
+    return text, get_single_back_keyboard("main_menu")

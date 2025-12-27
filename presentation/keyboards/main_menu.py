@@ -8,11 +8,9 @@ def get_main_menu_kb() -> InlineKeyboardMarkup:
     builder.button(text="Команди", callback_data="teams")
     builder.button(text="Матчі", callback_data="to_matches")
     builder.button(text="Гравці", callback_data="players")
-    builder.adjust(3)
+    builder.button(text="Оновити", callback_data="refresh")
+    builder.adjust(3,1)
     return builder.as_markup()
-
-def get_back_to_digest_button() -> InlineKeyboardButton:
-    return InlineKeyboardButton(text=f"{ICONS['back']} Назад до новин", callback_data="back_to_digest")
 
 def get_single_back_keyboard(callback_data: str = "nav_back") -> InlineKeyboardMarkup:
     """Універсальна кнопка 'Назад'"""
