@@ -1,8 +1,7 @@
-# models/match.py
+# domain/models/match.py
 from __future__ import annotations
 from dataclasses import dataclass, asdict, field
 from typing import Optional, List, Dict, Any
-
 
 @dataclass
 class Match:
@@ -23,6 +22,8 @@ class Match:
     events: Optional[List[Dict[str, Any]]] = field(default=None)
     statistics: Optional[List[Dict[str, Any]]] = field(default=None)
     lineups: Optional[List[Dict[str, Any]]] = field(default=None)
+
+    video_url: str | None = None
 
     _raw_fixture: Optional[Dict[str, Any]] = field(default=None, repr=False)
 
@@ -45,7 +46,7 @@ class Match:
 
         referee = fixture.get("referee")
 
-        return Match(
+        match = Match(
             fixture_id=fixture.get("id"),
             league=league,
             venue=full_venue,
@@ -55,32 +56,39 @@ class Match:
             away_id=(teams.get("away") or {}).get("id"),
             away=(teams.get("away") or {}).get("name", "Away"),
             date_utc=fixture.get("date"),
-            status=(fixture.get("status") or {}).get("short", "—"),
+            status=fixture.get("status", {}).get("short", "NS"),
             score_home=goals.get("home"),
             score_away=goals.get("away"),
-            events=None,
-            statistics=None,
-            lineups=None,
-            _raw_fixture=fixture_wrapper
+            _raw_fixture=fixture_wrapper,
         )
 
+        # Десеріалізація video_url з raw (якщо є в кеші)
+        match.video_url = fixture_wrapper.get("video_url")  # ← ДОДАНО
+
+        return match
+
+    def __str__(self) -> str:
+        return f"{self.home} {self.score_home or 0}–{self.score_away or 0} {self.away}"
+
+    @property
+    def score(self) -> str:
+        return f"{self.score_home or 0}–{self.score_away or 0}"
+
     def to_api_fixture_wrapper(self) -> Dict[str, Any]:
-        if self._raw_fixture:
-            wrapper = dict(self._raw_fixture)  # shallow copy
-        else:
-            wrapper = {
-                "fixture": {
-                    "id": self.fixture_id,
-                    "date": self.date_utc,
-                    "status": {"short": self.status},
-                },
-                "league": self.league if isinstance(self.league, dict) else {"name": self.league},
-                "teams": {
-                    "home": {"id": self.home_id, "name": self.home},
-                    "away": {"id": self.away_id, "name": self.away},
-                },
-                "goals": {"home": self.score_home, "away": self.score_away},
-            }
+        wrapper = {
+            "fixture": {
+                "id": self.fixture_id,
+                "date": self.date_utc,
+                "status": {"short": self.status},
+            },
+            "league": self.league if isinstance(self.league, dict) else {"name": self.league},
+            "teams": {
+                "home": {"id": self.home_id, "name": self.home},
+                "away": {"id": self.away_id, "name": self.away},
+            },
+            "goals": {"home": self.score_home, "away": self.score_away},
+            "video_url": self.video_url,  # ← ДОДАНО
+        }
 
         if self.events is not None:
             wrapper["events"] = {

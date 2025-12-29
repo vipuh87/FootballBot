@@ -4,6 +4,8 @@ from typing import List
 
 from domain.models.match import Match
 from application.services.team_service import is_ukrainian_team, is_selected_team, highlight_team
+from application.api.youtube_service import search_match_highlight
+
 
 class NewsDigestService:
     def __init__(self, repo, player_performance):
@@ -20,9 +22,10 @@ class NewsDigestService:
                 "Перейдіть до розділу «Матчі», щоб переглянути розклад на сьогодні."
             )
 
-        lines = [f"📊 Результати вчора ({yesterday.strftime('%d %m %Y')})\n"]
+        lines = [f"📊 Результати вчора ({yesterday.strftime('%d.%m.%Y')})\n"]
 
         for match in matches:
+
             score = f"{highlight_team(match.home)} {match.score_home or 0}–{match.score_away or 0} {highlight_team(match.away)}"
 
             home_selected_foreign = is_selected_team(match.home_id) and not is_ukrainian_team(match.home_id)
@@ -43,7 +46,7 @@ class NewsDigestService:
                     from data.selected_teams import TEAMS
                     team_data = TEAMS.get(team_id)
                     if not team_data or not team_data.get("players"):
-                        lines.append("    (немає відстежуваних гравців)")
+                        lines.append("(немає відстежуваних гравців)")
                         continue
 
                     ukr_players = team_data["players"]  # {id: name}
@@ -52,7 +55,7 @@ class NewsDigestService:
                         perf = await self.player_performance.get_player_info(match, p_id, p_name, team_id)
 
                         if not perf["in_squad"]:
-                            lines.append(f"    • {p_name}: не в заявці")
+                            lines.append(f"   • {p_name}: не в заявці")
                             continue
 
                         status = perf["status"]
@@ -64,10 +67,20 @@ class NewsDigestService:
                             actions_text = ", без результативних дій" if "провів" in status or "замінений" in status else ""
 
                         lines.append(f"    • {p_name}: {status}{actions_text}")
+
+                video_url = await search_match_highlight(match)
+                if video_url:
+                    lines.append(f"📹 <a href='{video_url}'>Відеоогляд матчу</a>")
+
+                    if match.video_url == video_url:  # вже збережено
+                        pass
+                    else:
+                        match.video_url = video_url
+                        await self.repo.save_match(match)  #
             else:
                 lines.append(f"• {score}")
 
-            lines.append("")  # відступ між матчами
+            lines.append("")
 
         lines.append("\nДетальніше — у розділі матчів")
         return "\n".join(lines)

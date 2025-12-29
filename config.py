@@ -2,6 +2,7 @@ import os
 from zoneinfo import ZoneInfo
 
 API_SPORTS_KEY = os.getenv("API_SPORTS_KEY", "db298b866891a40645b145c9dd202cfe")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "AIzaSyBaYsXvFLHytr2hHHECF1bI4wvVXTHrMcw")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "7986237119:AAGE2J03qPLAWQFzc5KarNSbCSZwH1o0qIU")
 
 API_SPORTS_BASE = "https://v3.football.api-sports.io"

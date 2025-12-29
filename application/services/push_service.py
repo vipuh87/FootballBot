@@ -92,16 +92,34 @@ class PushService:
             except Exception as e:
                 logger.error(f"Не вдалося надіслати дайджест в {chat_id}: {e}")
 
-    async def send_announcement(self, text: str):
+    async def send_announcement(self, text: str, targets: list = None):
         """
-        Надсилає ручне оголошення в усі PUSH_TARGETS.
+        Надсилає ручне оголошення в вказані targets (або всі push_targets за замовчуванням)
         """
         if not text.strip():
             print("❌ Текст оголошення порожній — пропускаю.")
             return
 
-        await self._send_plain(text)
-        print(f"✅ Оголошення надіслано в {len(self.push_targets)} чатів.")
+        targets = targets or self.push_targets
+
+        sent_count = 0
+        for target in targets:
+            try:
+                kwargs = {"parse_mode": "HTML"}
+                if target.get("thread_id"):
+                    kwargs["message_thread_id"] = int(target["thread_id"])
+
+                await self.bot.send_message(
+                    chat_id=target["chat_id"],
+                    text=text,
+                    **kwargs
+                )
+                sent_count += 1
+                await asyncio.sleep(0.1)  # антифлуд
+            except Exception as e:
+                print(f"❌ Помилка надсилання в {target['chat_id']}: {e}")
+
+        print(f"✅ Оголошення надіслано в {sent_count} з {len(targets)} чатів.")
 
     async def send_reminder_for_match(self, match):
         """Надсилає нагадування для одного матчу"""

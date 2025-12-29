@@ -16,21 +16,7 @@ class ApiClient:
                 return await resp.json()
 
     async def fixtures_by_date(self, target_date: date) -> Dict:
-        data = await self._get('/fixtures', params={'date': target_date.isoformat()})
-        fixtures = data.get("response", [])
-
-        filtered = []
-
-        for f in fixtures:
-            home_id = f.get("teams", {}).get("home", {}).get("id")
-            away_id = f.get("teams", {}).get("away", {}).get("id")
-
-            if is_selected_team(home_id) or is_selected_team(away_id):
-                filtered.append(f)
-
-        return {
-            "response": filtered
-        }
+        return await self._get('/fixtures', params={'date': target_date.isoformat()})
 
     async def events_by_fixture(self, fixture_id: int) -> Dict:
         return await self._get('/fixtures/events', params={'fixture': fixture_id})

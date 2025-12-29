@@ -69,7 +69,9 @@ async def run_announce_mode():
 
 # Звичайний запуск бота
 async def main():
-    container = Container(bot=bot)
+    Container.init(bot=bot)
+
+    container = Container.get()
 
     # Scheduler: нагадування + дайджест
     scheduler = container.update_scheduler

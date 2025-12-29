@@ -1,3 +1,4 @@
+import asyncio
 from datetime import date
 
 from aiogram import Router
@@ -9,6 +10,7 @@ from application.container import Container
 from presentation.states import BotStates
 from presentation.views.match_list import render_matches_list
 from presentation.views.digest_view import render_main_digest
+from presentation.routers.matches_router import _render_matches_day
 from utils.common import safe_edit
 
 router = Router()
@@ -20,7 +22,7 @@ router = Router()
 async def main_menu(event: Message | CallbackQuery, state: FSMContext):
     text, kb = await render_main_digest()
 
-    await state.clear()  # Очищаємо стан, бо ми на головній
+    await state.clear()
 
     if isinstance(event, Message):
         await event.answer(text, reply_markup=kb, parse_mode="HTML")
@@ -59,6 +61,7 @@ async def cb_refresh(c: CallbackQuery, state: FSMContext):
         try:
             print(f"🔄 MANUAL REFRESH: {day}")
             await repo.refresh_day(day, api)
+            await asyncio.sleep(1)
 
             # Оновлюємо деталі для всіх матчів дня
             matches = await repo.list_matches_for_day(day)
