@@ -1,5 +1,7 @@
-app = "footballbot"
+app = "footballbot-fvxv2g"
+
+[build]
+  builder = "paketobuildpacks/builder:base"
 
 [processes]
   app = "python bot.py"
-  
