@@ -12,7 +12,7 @@ async def search_match_highlight(match) -> str | None:
         print(f"Відео з кешу для матчу {match.fixture_id}: {match.video_url}")
         return match.video_url
 
-    query = f"{match.home} {match.away}"
+    query = f"{match.home} {match.away} highlights"
 
     published_after_dt = datetime.now(timezone.utc) - timedelta(days=3)
     published_after = published_after_dt.replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -21,9 +21,11 @@ async def search_match_highlight(match) -> str | None:
     club_channels = []
     home_data = TEAMS.get(match.home_id)
     away_data = TEAMS.get(match.away_id)
-    if home_data and home_data.get("youtube_channel_id"):
+    if (((home_data and home_data.get("youtube_channel_id"))
+        and (away_data and away_data.get("youtube_channel_id")))
+            or (home_data and home_data.get("youtube_channel_id"))):
         club_channels.append(home_data["youtube_channel_id"])
-    if away_data and away_data.get("youtube_channel_id"):
+    elif away_data and away_data.get("youtube_channel_id"):
         club_channels.append(away_data["youtube_channel_id"])
 
     # 2. Транслятори (Megogo, Setanta, Sky)
