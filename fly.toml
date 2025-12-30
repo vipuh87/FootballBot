@@ -1,0 +1,7 @@
+app = "footballbot"
+
+[build]
+  image = "python:3.10-slim"
+
+[processes]
+  app = "python bot.py"
