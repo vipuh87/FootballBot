@@ -17,11 +17,11 @@ GROUP_TOPIC_ID = int(os.getenv("GROUP_TOPIC_ID", '9'))
 PUSH_TARGETS = [
     {
         "chat_id": -5059955185,
-        "thread_id": None,  # ✅ звичайна група
+        "thread_id": None,
     },
     {
         "chat_id": -1002016840854,
-        "thread_id": 9,    # ✅ топік
+        "thread_id": 9,
     }
 ]
 
