@@ -1,5 +1,6 @@
 # presentation/views/statistics.py
 from presentation.keyboards.match_details import get_match_details_kb
+from presentation.keyboards.main_menu import get_single_back_keyboard
 from data.icons import ICONS
 from data.statistics_translations import STATS_TRANSLATIONS
 

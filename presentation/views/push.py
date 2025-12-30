@@ -17,7 +17,7 @@ def render_reminder_text(match, ua_info):
 
     text = (
         f"{ICONS['megaphone']} <b>{random_match_is_soon_phrase()}</b>\n\n"
-        f"{home} {ICONS["vs"]} {away}\n"
+        f"{home} {ICONS['vs']} {away}\n"
         f"{ICONS['rocket']} Початок: {when}\n\n"
         f"{render_ukrainian_players_block(ua_info)}\n"
         f"Матч почнеться менше ніж через 15 хв."
