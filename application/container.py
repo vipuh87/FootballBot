@@ -12,10 +12,6 @@ from application.services.match_details_service import MatchDetailsService
 from application.services.ukrainian_player_performance_service import UkrainianPlayerPerformanceService
 from config import USE_REDIS, REDIS_URL
 
-from infrastructure.storage.json_adapter import JsonCacheAdapter
-from infrastructure.storage.redis_adapter import RedisCacheAdapter
-import redis.asyncio as redis
-
 class Container:
     _instance = None
 
@@ -24,6 +20,8 @@ class Container:
         self.api = ApiClient()
 
         if USE_REDIS:
+            import redis.asyncio as redis
+            from infrastructure.storage.redis_adapter import RedisCacheAdapter
             redis_client = redis.from_url(
                 REDIS_URL,
                 encoding="utf-8",
@@ -31,6 +29,7 @@ class Container:
             )
             adapter = RedisCacheAdapter(redis_client)
         else:
+            from infrastructure.storage.json_adapter import JsonCacheAdapter
             adapter = JsonCacheAdapter()
 
         self.cache = CacheService(adapter)
