@@ -4,4 +4,4 @@ app = "footballbot"
   image = "python:3.10-slim"
 
 [processes]
-  app = "python bot.py"
+  app = "/code/entrypoint.sh"
