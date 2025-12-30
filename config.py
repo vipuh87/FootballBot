@@ -39,7 +39,7 @@ MIN_REQUESTS_TO_ALLOW_MANUAL = int(os.getenv("MIN_REQUESTS_TO_ALLOW_MANUAL", "10
 
 HEADERS = {"x-apisports-key": API_SPORTS_KEY}
 
-USE_REDIS=True          # false — JSON, true — Redis
+USE_REDIS=False          # false — JSON, true — Redis
 REDIS_URL="redis://localhost:6379/0"  # або твій Redis URL
 
 # Нагадування перед матчем (в хвилинах до початку)
