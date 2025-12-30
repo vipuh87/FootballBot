@@ -1,11 +1,11 @@
 # presentation/views/events.py
-from presentation.views.keyboards import single_back_keyboard
+from presentation.keyboards.match_details import get_match_details_kb
 from data.icons import ICONS
 
 
 def render_events(events: list, fid: int):
     if not events:
-        return f"{ICONS['warning']} Подій не знайдено", single_back_keyboard()
+        return f"{ICONS['warning']} Подій не знайдено", get_match_details_kb(fid)
 
     text = f"{ICONS['ball']} <b>Події матчу</b>\n\n"
 
@@ -30,7 +30,7 @@ def render_events(events: list, fid: int):
         else:
             text += f"{ICONS['info']} <b>{minute_str}</b> {team} — {detail} ({player})\n"
 
-    return text, single_back_keyboard()
+    return text, get_match_details_kb(fid)
 
 def _render_goal_event(minute: str, team: str, player: str, assist: str | None, detail: str):
     icon = ICONS.get("goal", "⚽")

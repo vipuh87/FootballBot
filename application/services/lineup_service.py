@@ -26,3 +26,18 @@ def get_start_xi(team_data):
 
 def get_substitutes(team_data):
     return team_data.get("substitutes", [])
+
+def get_team_lineup(match: Match, team_id: int):
+    """Повертає lineup dict для конкретної команди або None"""
+    if not match.lineups:
+        return None
+    for lineup in match.lineups:
+        if lineup["team"]["id"] == team_id:
+            return lineup
+    return None
+
+def get_home_lineup(match: Match):
+    return get_team_lineup(match, match.home_id)
+
+def get_away_lineup(match: Match):
+    return get_team_lineup(match, match.away_id)

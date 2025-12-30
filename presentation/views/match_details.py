@@ -1,6 +1,6 @@
 from application.services.team_service import highlight_team
 from presentation.views.formatters import format_match_header, format_match_score
-from presentation.views.keyboards import match_detail_keyboard
+from presentation.keyboards.match_details import get_match_details_kb
 from data.icons import ICONS
 import re
 from typing import Optional, Tuple
@@ -42,4 +42,4 @@ def render_match_details(match):
     if match.referee:
         text += f"{ICONS.get('ref')} Суддя - {match.referee}\n"
 
-    return text, match_detail_keyboard(match.fixture_id)
+    return text, get_match_details_kb(match.fixture_id)

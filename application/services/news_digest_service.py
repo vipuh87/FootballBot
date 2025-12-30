@@ -4,6 +4,8 @@ from typing import List
 
 from domain.models.match import Match
 from application.services.team_service import is_ukrainian_team, is_selected_team, highlight_team
+from application.api.youtube_service import search_match_highlight
+from data.icons import ICONS
 
 class NewsDigestService:
     def __init__(self, repo, player_performance):
@@ -16,20 +18,22 @@ class NewsDigestService:
 
         if not matches:
             return (
-                "📰 Вчора не було матчів за участю відстежуваних клубів чи гравців.\n\n"
-                "Перейдіть до розділу «Матчі», щоб переглянути розклад на сьогодні."
+                f"{ICONS['news']} Вчора не було матчів за участю відстежуваних клубів чи гравців.\n\n"
+                "Перейдіть до розділу «Матчі», щоб переглянути розклад на сьогодні та завтра."
             )
 
-        lines = [f"📊 Результати вчора ({yesterday.strftime('%d %m %Y')})\n"]
+        lines = [f"{ICONS['news']} Ранковий дайджест за {yesterday.strftime('%d.%m.%Y')}\n"]
 
         for match in matches:
-            score = f"{highlight_team(match.home)} {match.score_home or 0}–{match.score_away or 0} {highlight_team(match.away)}"
+
+            score = (f"Матч між {highlight_team(match.home)} та {highlight_team(match.away)} завершився з рахунком "
+                     f"{match.score_home or 0}–{match.score_away or 0}")
 
             home_selected_foreign = is_selected_team(match.home_id) and not is_ukrainian_team(match.home_id)
             away_selected_foreign = is_selected_team(match.away_id) and not is_ukrainian_team(match.away_id)
 
             if home_selected_foreign or away_selected_foreign:
-                lines.append(f"• {score}")
+                lines.append(f"  {score}")
 
                 teams_to_analyze = []
                 if home_selected_foreign:
@@ -38,21 +42,21 @@ class NewsDigestService:
                     teams_to_analyze.append((match.away_id, match.away))
 
                 for team_id, team_name in teams_to_analyze:
-                    lines.append(f"  🇺🇦 {team_name}:")
+                    lines.append(f"В складі команди {highlight_team(team_name)}:")
 
                     from data.selected_teams import TEAMS
                     team_data = TEAMS.get(team_id)
                     if not team_data or not team_data.get("players"):
-                        lines.append("    (немає відстежуваних гравців)")
+                        lines.append(" немає відстежуваних гравців")
                         continue
 
-                    ukr_players = team_data["players"]  # {id: name}
+                    ukr_players = team_data["players"]
 
                     for p_id, p_name in ukr_players.items():
                         perf = await self.player_performance.get_player_info(match, p_id, p_name, team_id)
 
                         if not perf["in_squad"]:
-                            lines.append(f"    • {p_name}: не в заявці")
+                            lines.append(f"   {ICONS['ua_flag']} {p_name}: не потрапив навіть у заявку")
                             continue
 
                         status = perf["status"]
@@ -63,11 +67,21 @@ class NewsDigestService:
                         else:
                             actions_text = ", без результативних дій" if "провів" in status or "замінений" in status else ""
 
-                        lines.append(f"    • {p_name}: {status}{actions_text}")
+                        lines.append(f"    {ICONS['ua_flag']} {p_name}: {status}{actions_text}")
+
+                video_url = await search_match_highlight(match)
+                if video_url:
+                    lines.append(f"📹 <a href='{video_url}'>Відеоогляд матчу</a>")
+
+                    if match.video_url == video_url:
+                        pass
+                    else:
+                        match.video_url = video_url
+                        await self.repo.save_match(match)  #
             else:
                 lines.append(f"• {score}")
 
-            lines.append("")  # відступ між матчами
+            lines.append("")
 
         lines.append("\nДетальніше — у розділі матчів")
         return "\n".join(lines)

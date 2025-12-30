@@ -113,5 +113,17 @@ class MatchRepository:
 
     # ✅ ПРИМУСОВЕ ОНОВЛЕННЯ ДНЯ
     async def refresh_day(self, day: date, api):
+        print(f"🔄 START REFRESH DAY {day}")
+
         raw = await api.fixtures_by_date(day)
+
+        if not raw or not raw.get("response"):
+            print(f"❌ NO RAW DATA for {day}")
+            return
+
+        print(f"✅ RECEIVED {len(raw['response'])} fixtures from API for {day}")
+
+        # Зберігаємо повний raw в кеш (щоб при list_matches_for_day фільтрувати з повних даних)
         await self.cache.write_day(day, raw)
+
+        print(f"✅ SAVED full raw data for {day} to cache")
