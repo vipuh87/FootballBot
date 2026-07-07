@@ -1,0 +1,64 @@
+{
+  "617235046": {
+    "user_id": 617235046,
+    "display_name": "MayBuG",
+    "display_name_b": "Віталій",
+    "username": null,
+    "joined_at": "2026-06-08T05:20:03.229936+00:00",
+    "source_chat_ids": [
+      -1002016840854,
+      -5059955185,
+      617235046
+    ]
+  },
+  "133206776": {
+    "user_id": 133206776,
+    "display_name": "Vadim",
+    "display_name_b": "Вадім",
+    "username": "Vadukha",
+    "joined_at": "2026-06-08T06:56:29.105696+00:00",
+    "source_chat_ids": [
+      -1002016840854
+    ]
+  },
+  "1276915473": {
+    "user_id": 1276915473,
+    "display_name": "Олександр",
+    "display_name_b": "Олександр",
+    "username": null,
+    "joined_at": "2026-06-10T16:24:06.049765+00:00",
+    "source_chat_ids": [
+      -1002016840854
+    ]
+  },
+  "1690204605": {
+    "user_id": 1690204605,
+    "display_name": "Anatolii",
+    "display_name_b": "Анатолій",
+    "username": null,
+    "joined_at": "2026-06-10T18:19:22.987856+00:00",
+    "source_chat_ids": [
+      -5059955185
+    ]
+  },
+  "841859588": {
+    "user_id": 841859588,
+    "display_name": "Leonid Ponych",
+    "display_name_b": "Леонід",
+    "username": "Leonid_1378",
+    "joined_at": "2026-06-10T19:21:00.809918+00:00",
+    "source_chat_ids": [
+      -5059955185
+    ]
+  },
+  "1169506872": {
+    "user_id": 1169506872,
+    "display_name": "Natalia",
+    "display_name_b": "Ігорьок",
+    "username": null,
+    "joined_at": "2026-06-13T08:13:36.853410+00:00",
+    "source_chat_ids": [
+      -1002016840854
+    ]
+  }
+}

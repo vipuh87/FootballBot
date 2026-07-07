@@ -1,11 +1,26 @@
 # application/services/news_digest_service.py
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from typing import List
 
 from domain.models.match import Match
 from application.services.team_service import is_ukrainian_team, is_selected_team, highlight_team
 from application.api.youtube_service import search_match_highlight
 from data.icons import ICONS
+from data.selected_teams import WORLD_CUP_END, WORLD_CUP_START
+
+
+def _is_world_cup_period(day: date | None = None) -> bool:
+    day = day or date.today()
+    return WORLD_CUP_START <= day <= WORLD_CUP_END
+
+
+def _format_match_time(date_utc: str) -> str:
+    from config import TZ_ITALY, TZ_UKRAINE
+
+    dt = datetime.fromisoformat(date_utc.replace("Z", "+00:00"))
+    italy = dt.astimezone(TZ_ITALY).strftime("%d.%m %H:%M")
+    ukraine = dt.astimezone(TZ_UKRAINE).strftime("%d.%m %H:%M")
+    return f"{italy} {ICONS['it_flag']} / {ukraine} {ICONS['ua_flag']}"
 
 class NewsDigestService:
     def __init__(self, repo, player_performance):
@@ -13,6 +28,9 @@ class NewsDigestService:
         self.player_performance = player_performance
 
     async def generate_yesterday_digest(self) -> str:
+        if _is_world_cup_period():
+            return self.generate_world_cup_digest()
+
         yesterday = date.today() - timedelta(days=1)
         matches: List[Match] = await self.repo.list_matches_for_day(yesterday)
 
@@ -84,4 +102,37 @@ class NewsDigestService:
             lines.append("")
 
         lines.append("\nДетальніше — у розділі матчів")
+        return "\n".join(lines)
+
+    def generate_world_cup_digest(self) -> str:
+        from application.services.predictions import PredictionService
+
+        svc = PredictionService()
+        today = date.today()
+        sections = [
+            ("Вчора", today - timedelta(days=1)),
+            ("Сьогодні", today),
+            ("Завтра", today + timedelta(days=1)),
+        ]
+        lines = [f"{ICONS['news']} Дайджест ЧС-2026\n"]
+
+        for title, day in sections:
+            matches = svc.matches_on_utc_date(day)
+            lines.append(f"<b>{title} · {day.strftime('%d.%m.%Y')}</b>")
+            if not matches:
+                lines.append("Матчів немає.\n")
+                continue
+
+            for match in matches:
+                score = ""
+                if match.get("score_home") is not None and match.get("score_away") is not None:
+                    score = f" <b>{match['score_home']}:{match['score_away']}</b>"
+                status = f" · {match.get('status')}" if match.get("status") and match.get("status") != "NS" else ""
+                lines.append(
+                    f"• {match.get('home_uk') or match['home']} - {match.get('away_uk') or match['away']}"
+                    f"{score}{status}\n"
+                    f"  {match.get('group') or match.get('stage')} · {_format_match_time(match['date_utc'])}"
+                )
+            lines.append("")
+
         return "\n".join(lines)

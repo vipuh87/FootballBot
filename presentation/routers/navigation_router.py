@@ -11,8 +11,6 @@ from presentation.views.match_details import render_match_details  # для back
 
 # Keyboards
 from presentation.keyboards.main_menu import get_main_menu_kb
-from presentation.keyboards.matches import get_day_kb
-from presentation.keyboards.match_details import get_match_details_kb
 
 from datetime import date
 
@@ -39,8 +37,7 @@ async def back_to_matches_list(callback: CallbackQuery):
         text = "Сьогодні немає матчів за участю відстежуваних команд."
         kb = get_main_menu_kb()
     else:
-        text = render_matches_list(matches, day=today)
-        kb = get_day_kb(matches)
+        text, kb = await render_matches_list(matches, day=today)
 
     await callback.message.edit_text(text, reply_markup=kb)
     await callback.answer()
@@ -62,8 +59,7 @@ async def back_to_match_detail(callback: CallbackQuery):
     details_service = Container.get().match_details
     match = await details_service.ensure_details(match)
 
-    text = render_match_details(match)
-    kb = get_match_details_kb(match.fixture_id)
+    text, kb = render_match_details(match)
 
     await callback.message.edit_text(text, reply_markup=kb, parse_mode="HTML")
     await callback.answer()

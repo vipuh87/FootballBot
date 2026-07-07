@@ -101,8 +101,11 @@ async def back_to_match_details(callback: CallbackQuery):
     # Якщо fixture_id не в data — можна витягнути з попереднього контексту (FSM або cache), але простіше передавати в data
 
     match = await Container.get().repo.find_match_by_id(fixture_id)
-    text = render_match_details(match)
-    kb = get_match_details_kb(match)
+    if not match:
+        await callback.answer("Матч не знайдено", show_alert=True)
+        return
+
+    text, kb = render_match_details(match)
 
     await callback.message.edit_text(text, reply_markup=kb, parse_mode="HTML")
     await callback.answer()

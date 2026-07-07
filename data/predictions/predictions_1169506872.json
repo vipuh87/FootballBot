@@ -1,0 +1,282 @@
+{
+  "8": {
+    "fixture_id": 8,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-13T08:43:13.718823+00:00",
+    "updated_at": "2026-06-13T08:43:13.718833+00:00"
+  },
+  "7": {
+    "fixture_id": 7,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-13T08:43:26.316986+00:00",
+    "updated_at": "2026-06-13T08:43:26.316996+00:00"
+  },
+  "5": {
+    "fixture_id": 5,
+    "home_score": 0,
+    "away_score": 2,
+    "created_at": "2026-06-13T08:43:42.643216+00:00",
+    "updated_at": "2026-06-13T08:43:42.643232+00:00"
+  },
+  "6": {
+    "fixture_id": 6,
+    "home_score": 0,
+    "away_score": 2,
+    "created_at": "2026-06-13T08:44:01.604639+00:00",
+    "updated_at": "2026-06-13T08:44:01.604654+00:00"
+  },
+  "11": {
+    "fixture_id": 11,
+    "home_score": 1,
+    "away_score": 1,
+    "created_at": "2026-06-13T08:45:40.344246+00:00",
+    "updated_at": "2026-06-13T08:45:40.344261+00:00"
+  },
+  "9": {
+    "fixture_id": 9,
+    "home_score": 1,
+    "away_score": 0,
+    "created_at": "2026-06-13T08:45:59.768721+00:00",
+    "updated_at": "2026-06-13T08:45:59.768731+00:00"
+  },
+  "12": {
+    "fixture_id": 12,
+    "home_score": 0,
+    "away_score": 0,
+    "created_at": "2026-06-13T08:46:18.040795+00:00",
+    "updated_at": "2026-06-13T08:46:18.040805+00:00"
+  },
+  "10": {
+    "fixture_id": 10,
+    "home_score": 4,
+    "away_score": 1,
+    "created_at": "2026-06-13T09:13:52.618432+00:00",
+    "updated_at": "2026-06-13T09:18:11.225206+00:00"
+  },
+  "34": {
+    "fixture_id": 34,
+    "home_score": 4,
+    "away_score": 0,
+    "created_at": "2026-06-20T18:50:13.751569+00:00",
+    "updated_at": "2026-06-20T18:50:13.751582+00:00"
+  },
+  "36": {
+    "fixture_id": 36,
+    "home_score": 1,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:50:36.636936+00:00",
+    "updated_at": "2026-06-20T18:50:36.636946+00:00"
+  },
+  "38": {
+    "fixture_id": 38,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:50:53.524960+00:00",
+    "updated_at": "2026-06-20T18:50:53.524969+00:00"
+  },
+  "39": {
+    "fixture_id": 39,
+    "home_score": 3,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:51:04.888502+00:00",
+    "updated_at": "2026-06-20T18:51:04.888511+00:00"
+  },
+  "37": {
+    "fixture_id": 37,
+    "home_score": 4,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:51:46.674142+00:00",
+    "updated_at": "2026-06-20T18:51:46.674152+00:00"
+  },
+  "40": {
+    "fixture_id": 40,
+    "home_score": 0,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:52:04.921412+00:00",
+    "updated_at": "2026-06-20T18:52:04.921422+00:00"
+  },
+  "43": {
+    "fixture_id": 43,
+    "home_score": 3,
+    "away_score": 1,
+    "created_at": "2026-06-20T18:52:15.645926+00:00",
+    "updated_at": "2026-06-20T18:52:15.645937+00:00"
+  },
+  "46": {
+    "fixture_id": 46,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-23T19:43:22.128142+00:00",
+    "updated_at": "2026-06-23T19:46:24.224895+00:00"
+  },
+  "48": {
+    "fixture_id": 48,
+    "home_score": 3,
+    "away_score": 1,
+    "created_at": "2026-06-23T19:43:41.384258+00:00",
+    "updated_at": "2026-06-23T19:43:41.384268+00:00"
+  },
+  "51": {
+    "fixture_id": 51,
+    "home_score": 1,
+    "away_score": 0,
+    "created_at": "2026-06-23T19:43:53.267042+00:00",
+    "updated_at": "2026-06-23T19:43:53.267052+00:00"
+  },
+  "52": {
+    "fixture_id": 52,
+    "home_score": 2,
+    "away_score": 0,
+    "created_at": "2026-06-23T19:44:10.157362+00:00",
+    "updated_at": "2026-06-23T19:44:10.157372+00:00"
+  },
+  "61": {
+    "fixture_id": 61,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-26T15:53:55.620049+00:00",
+    "updated_at": "2026-06-26T15:53:55.620059+00:00"
+  },
+  "62": {
+    "fixture_id": 62,
+    "home_score": 3,
+    "away_score": 1,
+    "created_at": "2026-06-26T15:54:14.128694+00:00",
+    "updated_at": "2026-06-26T15:54:14.128703+00:00"
+  },
+  "65": {
+    "fixture_id": 65,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-26T15:54:40.752736+00:00",
+    "updated_at": "2026-06-26T15:54:40.752748+00:00"
+  },
+  "66": {
+    "fixture_id": 66,
+    "home_score": 0,
+    "away_score": 2,
+    "created_at": "2026-06-26T15:54:57.766328+00:00",
+    "updated_at": "2026-06-26T15:54:57.766338+00:00"
+  },
+  "64": {
+    "fixture_id": 64,
+    "home_score": 0,
+    "away_score": 3,
+    "created_at": "2026-06-26T15:55:30.828842+00:00",
+    "updated_at": "2026-06-26T15:55:30.828850+00:00"
+  },
+  "63": {
+    "fixture_id": 63,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-06-26T15:55:54.318923+00:00",
+    "updated_at": "2026-06-26T15:55:54.318937+00:00"
+  },
+  "67": {
+    "fixture_id": 67,
+    "home_score": 0,
+    "away_score": 3,
+    "created_at": "2026-06-27T16:14:31.326796+00:00",
+    "updated_at": "2026-06-27T16:14:31.326805+00:00"
+  },
+  "68": {
+    "fixture_id": 68,
+    "home_score": 0,
+    "away_score": 1,
+    "created_at": "2026-06-27T16:14:44.598955+00:00",
+    "updated_at": "2026-06-27T16:14:44.598964+00:00"
+  },
+  "72": {
+    "fixture_id": 72,
+    "home_score": 0,
+    "away_score": 0,
+    "created_at": "2026-06-27T16:14:56.884944+00:00",
+    "updated_at": "2026-06-27T16:14:56.884954+00:00"
+  },
+  "69": {
+    "fixture_id": 69,
+    "home_score": 0,
+    "away_score": 1,
+    "created_at": "2026-06-27T16:15:15.843900+00:00",
+    "updated_at": "2026-06-27T16:15:15.843909+00:00"
+  },
+  "70": {
+    "fixture_id": 70,
+    "home_score": 0,
+    "away_score": 3,
+    "created_at": "2026-06-27T16:15:48.489663+00:00",
+    "updated_at": "2026-06-27T16:15:48.489675+00:00"
+  },
+  "83": {
+    "fixture_id": 83,
+    "home_score": 4,
+    "away_score": 1,
+    "created_at": "2026-07-01T18:02:04.474842+00:00",
+    "updated_at": "2026-07-01T18:02:04.474852+00:00"
+  },
+  "82": {
+    "fixture_id": 82,
+    "home_score": 3,
+    "away_score": 2,
+    "created_at": "2026-07-01T18:02:18.326599+00:00",
+    "updated_at": "2026-07-01T18:02:18.326609+00:00"
+  },
+  "81": {
+    "fixture_id": 81,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-07-01T18:02:30.041576+00:00",
+    "updated_at": "2026-07-01T18:02:30.041587+00:00"
+  },
+  "84": {
+    "fixture_id": 84,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-07-02T15:52:26.372057+00:00",
+    "updated_at": "2026-07-02T15:52:26.372070+00:00"
+  },
+  "85": {
+    "fixture_id": 85,
+    "home_score": 1,
+    "away_score": 0,
+    "created_at": "2026-07-02T15:52:41.099404+00:00",
+    "updated_at": "2026-07-02T15:52:41.099417+00:00"
+  },
+  "86": {
+    "fixture_id": 86,
+    "home_score": 0,
+    "away_score": 1,
+    "created_at": "2026-07-02T15:52:54.546878+00:00",
+    "updated_at": "2026-07-02T15:52:54.546891+00:00"
+  },
+  "87": {
+    "fixture_id": 87,
+    "home_score": 3,
+    "away_score": 0,
+    "created_at": "2026-07-03T18:20:21.340893+00:00",
+    "updated_at": "2026-07-03T18:20:21.340907+00:00"
+  },
+  "88": {
+    "fixture_id": 88,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-07-03T18:20:36.173552+00:00",
+    "updated_at": "2026-07-03T18:20:36.173562+00:00"
+  },
+  "89": {
+    "fixture_id": 89,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-07-03T18:21:02.714712+00:00",
+    "updated_at": "2026-07-03T18:21:02.714726+00:00"
+  },
+  "91": {
+    "fixture_id": 91,
+    "home_score": 3,
+    "away_score": 2,
+    "created_at": "2026-07-04T20:46:52.767006+00:00",
+    "updated_at": "2026-07-04T20:46:52.767016+00:00"
+  }
+}

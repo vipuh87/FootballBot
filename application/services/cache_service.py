@@ -39,14 +39,14 @@ class CacheService:
 
         if changed:
             raw["response"] = response
-            self.write_day(day, raw)
+            await self.write_day(day, raw)
 
     # save_lineups, save_events, save_statistics — залишаємо як є
-    def save_lineups(self, day: date, fixture_id: int, lineups: list) -> None:
-        self.update_match_section(day, fixture_id, "lineups", lineups)
+    async def save_lineups(self, day: date, fixture_id: int, lineups: list) -> None:
+        await self.update_match_section(day, fixture_id, "lineups", lineups)
 
-    def save_events(self, day: date, fixture_id: int, events: list) -> None:
-        self.update_match_section(day, fixture_id, "events", events)
+    async def save_events(self, day: date, fixture_id: int, events: list) -> None:
+        await self.update_match_section(day, fixture_id, "events", events)
 
-    def save_statistics(self, day: date, fixture_id: int, statistics: list) -> None:
-        self.update_match_section(day, fixture_id, "statistics", statistics)
+    async def save_statistics(self, day: date, fixture_id: int, statistics: list) -> None:
+        await self.update_match_section(day, fixture_id, "statistics", statistics)

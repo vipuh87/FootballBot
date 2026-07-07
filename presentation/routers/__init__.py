@@ -2,6 +2,7 @@ from .main_menu_router import router as main_menu_router
 from .matches_router import router as matches_router
 from .teams_router import router as teams_router
 from .players_router import router as players_router
+from .predictions_router import router as predictions_router
 from .match_details_router import router as match_details_router
 from .navigation_router import router as navigation_router
 
@@ -10,6 +11,7 @@ all_routers = [
     matches_router,
     teams_router,
     players_router,
+    predictions_router,
     match_details_router,
     navigation_router
 ]

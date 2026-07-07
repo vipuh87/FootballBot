@@ -12,6 +12,9 @@ from config import BOT_TOKEN
 from application.container import Container
 from presentation.routers import all_routers
 
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN is not configured. Set it in .env or environment variables.")
+
 # Логування
 logging.basicConfig(
     level=logging.INFO,
@@ -28,9 +31,6 @@ dp = Dispatcher()
 # Підключаємо всі роутери
 for router in all_routers:
     dp.include_router(router)
-
-print("🚀 Бот запущено — нова архітектура з контейнером!")
-
 
 # CLI-режим: ручне оголошення
 async def run_announce_mode():
@@ -69,6 +69,7 @@ async def run_announce_mode():
 
 # Звичайний запуск бота
 async def main():
+    print("🚀 Бот запущено — нова архітектура з контейнером!")
     Container.init(bot=bot)
 
     container = Container.get()

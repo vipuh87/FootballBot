@@ -2,7 +2,6 @@ import aiohttp
 from typing import Dict, Any
 from datetime import date
 from config import API_SPORTS_BASE, HEADERS
-from application.services.team_service import is_selected_team
 
 class ApiClient:
     def __init__(self):

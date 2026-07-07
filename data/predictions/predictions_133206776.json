@@ -1,0 +1,93 @@
+{
+  "1": {
+    "fixture_id": 1,
+    "home_score": 2,
+    "away_score": 0,
+    "created_at": "2026-06-10T19:02:48.568094+00:00",
+    "updated_at": "2026-06-10T19:02:48.568110+00:00"
+  },
+  "2": {
+    "fixture_id": 2,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-11T03:29:45.240541+00:00",
+    "updated_at": "2026-06-11T03:29:45.240555+00:00"
+  },
+  "3": {
+    "fixture_id": 3,
+    "home_score": 0,
+    "away_score": 1,
+    "created_at": "2026-06-11T18:04:01.991490+00:00",
+    "updated_at": "2026-06-12T12:45:14.818694+00:00"
+  },
+  "4": {
+    "fixture_id": 4,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-12T09:11:24.772972+00:00",
+    "updated_at": "2026-06-12T18:07:06.726927+00:00"
+  },
+  "8": {
+    "fixture_id": 8,
+    "home_score": 1,
+    "away_score": 3,
+    "created_at": "2026-06-12T18:07:24.696360+00:00",
+    "updated_at": "2026-06-12T18:07:24.696374+00:00"
+  },
+  "7": {
+    "fixture_id": 7,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-06-13T04:21:07.506266+00:00",
+    "updated_at": "2026-06-13T04:21:07.506276+00:00"
+  },
+  "5": {
+    "fixture_id": 5,
+    "home_score": 1,
+    "away_score": 2,
+    "created_at": "2026-06-13T04:21:32.296333+00:00",
+    "updated_at": "2026-06-13T04:21:32.296348+00:00"
+  },
+  "6": {
+    "fixture_id": 6,
+    "home_score": 1,
+    "away_score": 3,
+    "created_at": "2026-06-13T04:21:49.214220+00:00",
+    "updated_at": "2026-06-13T04:21:49.214233+00:00"
+  },
+  "10": {
+    "fixture_id": 10,
+    "home_score": 3,
+    "away_score": 0,
+    "created_at": "2026-06-13T15:51:37.619902+00:00",
+    "updated_at": "2026-06-13T15:51:37.619916+00:00"
+  },
+  "11": {
+    "fixture_id": 11,
+    "home_score": 2,
+    "away_score": 1,
+    "created_at": "2026-06-13T18:51:31.301141+00:00",
+    "updated_at": "2026-06-14T16:39:28.193490+00:00"
+  },
+  "9": {
+    "fixture_id": 9,
+    "home_score": 2,
+    "away_score": 2,
+    "created_at": "2026-06-14T09:26:11.455055+00:00",
+    "updated_at": "2026-06-14T16:39:46.198834+00:00"
+  },
+  "12": {
+    "fixture_id": 12,
+    "home_score": 2,
+    "away_score": 2,
+    "created_at": "2026-06-14T09:26:31.549200+00:00",
+    "updated_at": "2026-06-14T11:57:28.219905+00:00"
+  },
+  "14": {
+    "fixture_id": 14,
+    "home_score": 0,
+    "away_score": 3,
+    "created_at": "2026-06-14T16:38:48.236777+00:00",
+    "updated_at": "2026-06-14T16:38:48.236787+00:00"
+  }
+}

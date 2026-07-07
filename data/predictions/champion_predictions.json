@@ -1,0 +1,50 @@
+{
+  "617235046": {
+    "champion_team_id": 9,
+    "champion": "Іспанія",
+    "champion_name": "Spain",
+    "champion_name_uk": "Іспанія",
+    "created_at": "2026-06-07T19:55:31.382665+00:00",
+    "updated_at": "2026-06-08T05:20:57.798568+00:00"
+  },
+  "133206776": {
+    "champion_team_id": 26,
+    "champion": "Аргентина",
+    "champion_name": "Argentina",
+    "champion_name_uk": "Аргентина",
+    "created_at": "2026-06-08T06:57:05.859802+00:00",
+    "updated_at": "2026-06-08T06:57:05.859813+00:00"
+  },
+  "1276915473": {
+    "champion_team_id": 2,
+    "champion": "Франція",
+    "champion_name": "France",
+    "champion_name_uk": "Франція",
+    "created_at": "2026-06-10T16:45:31.921361+00:00",
+    "updated_at": "2026-06-11T04:58:59.620795+00:00"
+  },
+  "841859588": {
+    "champion_team_id": 9,
+    "champion": "Іспанія",
+    "champion_name": "Spain",
+    "champion_name_uk": "Іспанія",
+    "created_at": "2026-06-10T19:21:25.634463+00:00",
+    "updated_at": "2026-06-10T19:21:25.634474+00:00"
+  },
+  "1690204605": {
+    "champion_team_id": 5529,
+    "champion": "Канада",
+    "champion_name": "Canada",
+    "champion_name_uk": "Канада",
+    "created_at": "2026-06-11T18:48:17.186554+00:00",
+    "updated_at": "2026-06-11T18:48:17.186566+00:00"
+  },
+  "1169506872": {
+    "champion_team_id": 10,
+    "champion": "Англія",
+    "champion_name": "England",
+    "champion_name_uk": "Англія",
+    "created_at": "2026-06-07T19:55:31.382665+00:00",
+    "updated_at": "2026-06-08T05:20:57.798568+00:00"
+  }
+}
