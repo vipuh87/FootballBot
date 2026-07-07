@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Call cron endpoint
         run: |
-          curl --fail --show-error --silent \
+          curl --fail-with-body --show-error \
             --request GET \
             --header "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
             "${{ secrets.PUBLIC_BASE_URL }}/api/cron"

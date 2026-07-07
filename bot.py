@@ -3,12 +3,15 @@
 import asyncio
 import logging
 import argparse
+import traceback
 
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
+from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.types import ErrorEvent
 
-from config import BOT_TOKEN
+from config import BOT_TOKEN, REDIS_URL, USE_REDIS
 from application.container import Container
 from presentation.routers import all_routers
 
@@ -26,11 +29,26 @@ bot = Bot(
     token=BOT_TOKEN,
     default=DefaultBotProperties(parse_mode=ParseMode.HTML)
 )
-dp = Dispatcher()
+
+if USE_REDIS:
+    from aiogram.fsm.storage.redis import RedisStorage
+
+    storage = RedisStorage.from_url(REDIS_URL)
+else:
+    storage = MemoryStorage()
+
+dp = Dispatcher(storage=storage)
 
 # Підключаємо всі роутери
 for router in all_routers:
     dp.include_router(router)
+
+
+@dp.errors()
+async def error_handler(event: ErrorEvent):
+    logging.exception("Update handling failed", exc_info=event.exception)
+    print("UPDATE ERROR:")
+    traceback.print_exception(type(event.exception), event.exception, event.exception.__traceback__)
 
 # CLI-режим: ручне оголошення
 async def run_announce_mode():
@@ -68,7 +86,7 @@ async def run_announce_mode():
 
 
 # Звичайний запуск бота
-async def main():
+async def main(drop_webhook: bool = False):
     print("🚀 Бот запущено — нова архітектура з контейнером!")
     Container.init(bot=bot)
 
@@ -79,6 +97,9 @@ async def main():
     scheduler.start()
     print("📅 Scheduler запущено")
 
+    if drop_webhook:
+        await bot.delete_webhook(drop_pending_updates=True)
+
     # Polling
     await dp.start_polling(bot)
 
@@ -86,10 +107,11 @@ async def main():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--announce", action="store_true", help="Ручне оголошення з консолі")
+    parser.add_argument("--drop-webhook", action="store_true", help="Delete Telegram webhook before local polling")
 
     args = parser.parse_args()
 
     if args.announce:
         asyncio.run(run_announce_mode())
     else:
-        asyncio.run(main())
+        asyncio.run(main(drop_webhook=args.drop_webhook))
