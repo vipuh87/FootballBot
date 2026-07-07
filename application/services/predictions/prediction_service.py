@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import logging
+import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -8,7 +10,7 @@ from typing import Any
 from data.icons import ICONS
 
 
-from config import TZ_ITALY, TZ_UKRAINE
+from config import REDIS_URL, TZ_ITALY, TZ_UKRAINE, USE_REDIS
 
 
 DATA_DIR = Path("data/predictions")
@@ -19,6 +21,7 @@ CHAMPION_PREDICTIONS_FILE = DATA_DIR / "champion_predictions.json"
 REMINDERS_FILE = DATA_DIR / "reminders.json"
 MATCHES_FILE = DATA_DIR / "world_cup_2026_matches.json"
 TEAMS_FILE = DATA_DIR / "world_cup_2026_teams.json"
+logger = logging.getLogger(__name__)
 
 
 RULES_TEXT_UA = (
@@ -54,10 +57,99 @@ class PredictionService:
     lock_minutes_before = 90
     match_reminder_minutes_before_lock = (24 * 60, 6 * 60, 3 * 60)
     champion_reminder_minutes_before_start = (72 * 60, 24 * 60, 6 * 60)
+    _redis_client = None
+    _redis_failed = False
+    _json_cache: dict[str, tuple[float, Any]] = {}
+    _json_cache_ttl_seconds = 15
 
     def __init__(self):
         DATA_DIR.mkdir(parents=True, exist_ok=True)
+        self._redis = self._connect_redis() if USE_REDIS else None
         self._ensure_files()
+
+    def _connect_redis(self):
+        if PredictionService._redis_client is not None:
+            return PredictionService._redis_client
+        if PredictionService._redis_failed:
+            return None
+
+        try:
+            import redis
+
+            client = redis.Redis.from_url(
+                REDIS_URL,
+                decode_responses=True,
+                socket_connect_timeout=2,
+                socket_timeout=2,
+                health_check_interval=30,
+            )
+            PredictionService._redis_client = client
+            return client
+        except Exception as exc:
+            PredictionService._redis_failed = True
+            logger.warning("Redis predictions storage is unavailable, using local JSON fallback: %s", exc)
+            return None
+
+    def _storage_key(self, path: Path) -> str:
+        return f"predictions:{path.stem}"
+
+    def _legacy_storage_key(self, path: Path) -> str:
+        return path.stem
+
+    def _prediction_user_ids_key(self) -> str:
+        return "predictions:user_ids"
+
+    def _cache_get(self, key: str):
+        cached = PredictionService._json_cache.get(key)
+        if cached is None:
+            return None
+        cached_at, value = cached
+        if time.monotonic() - cached_at > self._json_cache_ttl_seconds:
+            PredictionService._json_cache.pop(key, None)
+            return None
+        return value
+
+    def _cache_set(self, key: str, value: Any) -> None:
+        PredictionService._json_cache[key] = (time.monotonic(), value)
+
+    def _redis_get_json(self, path: Path, default: Any) -> Any:
+        if self._redis is None:
+            return None
+
+        for key in (self._storage_key(path), self._legacy_storage_key(path)):
+            cached = self._cache_get(key)
+            if cached is not None:
+                return cached
+
+            raw = self._redis.get(key)
+            if raw is None:
+                continue
+            try:
+                data = json.loads(raw)
+                self._cache_set(key, data)
+                return data
+            except Exception:
+                logger.warning("Invalid JSON in Redis key %s", key)
+                return default
+        return None
+
+    def _redis_set_json(self, path: Path, data: Any) -> None:
+        if self._redis is None:
+            return
+        payload = json.dumps(data, ensure_ascii=False)
+        namespaced_key = self._storage_key(path)
+        legacy_key = self._legacy_storage_key(path)
+        pipe = self._redis.pipeline()
+        pipe.set(namespaced_key, payload)
+        pipe.set(legacy_key, payload)
+
+        user_id = path.stem.replace("predictions_", "", 1)
+        if path.stem.startswith("predictions_") and user_id.isdigit():
+            pipe.sadd(self._prediction_user_ids_key(), user_id)
+
+        pipe.execute()
+        self._cache_set(namespaced_key, data)
+        self._cache_set(legacy_key, data)
 
     def _ensure_files(self) -> None:
         if not TOURNAMENT_FILE.exists():
@@ -119,6 +211,10 @@ class PredictionService:
         ]
 
     def _read_json(self, path: Path, default: Any) -> Any:
+        redis_value = self._redis_get_json(path, default)
+        if redis_value is not None:
+            return redis_value
+
         if not path.exists():
             return default
         try:
@@ -127,6 +223,10 @@ class PredictionService:
             return default
 
     def _write_json(self, path: Path, data: Any) -> None:
+        self._redis_set_json(path, data)
+        if self._redis is not None:
+            return
+
         path.parent.mkdir(parents=True, exist_ok=True)
         tmp = path.with_suffix(".tmp")
         tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -191,17 +291,49 @@ class PredictionService:
     def predictions(self) -> dict[str, dict[str, dict[str, Any]]]:
         result = {}
 
+        if self._redis is not None:
+            user_ids = {str(user_id) for user_id in self._redis.smembers(self._prediction_user_ids_key())}
+            if not user_ids:
+                user_ids = self._scan_prediction_user_ids()
+
+            for user_id in sorted(user_ids):
+                result[user_id] = self._read_json(DATA_DIR / f"predictions_{user_id}.json", {})
+            if result:
+                return result
+
         files = list(DATA_DIR.glob("predictions_*.json"))
 
         if files:
             for file in files:
                 user_id = file.stem.replace("predictions_", "")
+                if not user_id.isdigit():
+                    continue
                 result[user_id] = self._read_json(file, {})
 
             return result
 
         # fallback на старий формат
         return self._read_json(PREDICTIONS_FILE, {})
+
+    def _scan_prediction_user_ids(self) -> set[str]:
+        user_ids: set[str] = set()
+
+        if self._redis is None:
+            return user_ids
+
+        for key in self._redis.scan_iter(match="predictions:predictions_*", count=1000):
+            user_id = str(key).split("predictions:predictions_", 1)[-1]
+            if user_id.isdigit():
+                user_ids.add(user_id)
+
+        for key in self._redis.scan_iter(match="predictions_*", count=1000):
+            user_id = str(key).replace("predictions_", "", 1)
+            if user_id.isdigit():
+                user_ids.add(user_id)
+
+        if user_ids:
+            self._redis.sadd(self._prediction_user_ids_key(), *sorted(user_ids))
+        return user_ids
 
     def champion_predictions(self) -> dict[str, dict[str, Any]]:
         return self._read_json(CHAMPION_PREDICTIONS_FILE, {})
@@ -374,8 +506,9 @@ class PredictionService:
     def user_predictions(self, user_id: int) -> dict[str, dict[str, Any]]:
         path = self._prediction_file(user_id)
 
-        if path.exists():
-            return self._read_json(path, {})
+        user_data = self._read_json(path, None)
+        if user_data is not None:
+            return user_data
 
         # fallback на старий формат
         return self.predictions().get(str(user_id), {})
@@ -446,7 +579,18 @@ class PredictionService:
         tournament_champion = self.tournament_champion()
         matches = self.matches()
         matches_by_id = {str(m["fixture_id"]): m for m in matches}
+        prediction_counts_by_fixture: dict[str, int] = {}
+        exact_counts_by_fixture_score: dict[tuple[str, int, int], int] = {}
         rows = []
+
+        for user_predictions in predictions.values():
+            for fixture_id, prediction in user_predictions.items():
+                prediction_counts_by_fixture[fixture_id] = prediction_counts_by_fixture.get(fixture_id, 0) + 1
+                try:
+                    score_key = (fixture_id, int(prediction["home_score"]), int(prediction["away_score"]))
+                except (KeyError, TypeError, ValueError):
+                    continue
+                exact_counts_by_fixture_score[score_key] = exact_counts_by_fixture_score.get(score_key, 0) + 1
 
         for user_id, participant in participants.items():
             points = exact = correct = rare = zero = played = 0
@@ -456,12 +600,10 @@ class PredictionService:
                 if not match or match.get("score_home") is None or match.get("score_away") is None:
                     continue
 
-                match_predictions = self.match_predictions(int(fixture_id), include_private=True)
-                total_predictions = len(match_predictions)
-                exact_predictions = sum(
-                    1
-                    for p in match_predictions
-                    if p["home_score"] == match["score_home"] and p["away_score"] == match["score_away"]
+                total_predictions = prediction_counts_by_fixture.get(fixture_id, 0)
+                exact_predictions = exact_counts_by_fixture_score.get(
+                    (fixture_id, int(prediction["home_score"]), int(prediction["away_score"])),
+                    0,
                 )
                 score = self.score_prediction(prediction, match, total_predictions, exact_predictions)
                 points += score.points

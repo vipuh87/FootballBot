@@ -22,6 +22,9 @@ class RedisCacheAdapter(CacheAdapter):
     def _key_timestamp(self, day: date) -> str:
         return f"match_day:{day.isoformat()}:ts"
 
+    def _legacy_key_data(self, day: date) -> str:
+        return day.isoformat()
+
     async def write_day(self, day: date, data: Dict[Any, Any]) -> None:
         key_data = self._key_data(day)
         key_ts = self._key_timestamp(day)
@@ -34,8 +37,9 @@ class RedisCacheAdapter(CacheAdapter):
         await self.client.set(key_ts, now_utc_iso, ex=ttl_seconds)
 
     async def read_day(self, day: date) -> Optional[Dict[Any, Any]]:
-        key = self._key_data(day)
-        data = await self.client.get(key)
+        data = await self.client.get(self._key_data(day))
+        if data is None:
+            data = await self.client.get(self._legacy_key_data(day))
         if data is None:
             return None
         return json.loads(data)
