@@ -50,6 +50,36 @@ class PushService:
         except Exception as e:
             print(f"⚠️ Не вдалося зберегти {REMINDERS_FILE}: {e}")
 
+    def _redis(self):
+        adapter = getattr(getattr(self.repo, "cache", None), "adapter", None)
+        return getattr(adapter, "client", None)
+
+    async def was_reminder_sent(self, fixture_id: int) -> bool:
+        if str(fixture_id) in self.sent:
+            return True
+
+        redis = self._redis()
+        if redis is None:
+            return False
+
+        return await redis.get(f"reminder_sent:{fixture_id}") is not None
+
+    async def mark_reminder_sent(self, fixture_id: int, match_time_utc: str | None):
+        payload = {
+            "sent_at": datetime.now(TZ_UKRAINE).isoformat(),
+            "match_time_utc": match_time_utc,
+        }
+        self.sent[str(fixture_id)] = payload
+        self._save_sent()
+
+        redis = self._redis()
+        if redis is not None:
+            await redis.set(
+                f"reminder_sent:{fixture_id}",
+                json.dumps(payload, ensure_ascii=False),
+                ex=int(timedelta(days=30).total_seconds()),
+            )
+
     async def _send_plain(self, text: str):
         for target in PUSH_TARGETS:
             try:
@@ -130,11 +160,7 @@ class PushService:
             await self._send_plain(text)
 
             # Зберігаємо, щоб не дублювати (на всяк випадок)
-            self.sent[str(match.fixture_id)] = {
-                "sent_at": datetime.now(TZ_UKRAINE).isoformat(),
-                "match_time_utc": match.date_utc,
-            }
-            self._save_sent()
+            await self.mark_reminder_sent(match.fixture_id, match.date_utc)
 
             print(f"✅ Нагадування надіслано для матчу {match.fixture_id} ({match.home} — {match.away})")
         except Exception as e:

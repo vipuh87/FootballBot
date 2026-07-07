@@ -1,4 +1,4 @@
-from data.selected_teams import TEAMS, SELECTED_TEAM_IDS
+from data.selected_teams import TEAMS, get_selected_team_ids
 
 def get_all_teams():
     return TEAMS.items()
@@ -8,7 +8,7 @@ def get_all_team_names() -> list[str]:
 
 
 def is_selected_team(team_id: int) -> bool:
-    return team_id in SELECTED_TEAM_IDS
+    return team_id in get_selected_team_ids()
 
 
 def get_team(team_id: int):

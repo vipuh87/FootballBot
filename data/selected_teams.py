@@ -1,3 +1,43 @@
+import json
+from datetime import date
+from pathlib import Path
+
+
+WORLD_CUP_START = date(2026, 6, 11)
+WORLD_CUP_END = date(2026, 7, 19)
+
+
+def _world_cup_tracking_enabled() -> bool:
+    today = date.today()
+    return WORLD_CUP_START <= today <= WORLD_CUP_END
+
+
+def _load_world_cup_teams() -> dict[int, dict]:
+    path = Path(__file__).resolve().parent / "predictions" / "world_cup_2026_teams.json"
+    if not path.exists():
+        return {}
+
+    try:
+        teams = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    result = {}
+    for team in teams:
+        try:
+            team_id = int(team["api_football_team_id"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        result[team_id] = {
+            "name": team.get("name") or team.get("name_uk") or f"Team {team_id}",
+            "is_ukrainian": False,
+            "youtube_channel_id": None,
+            "players": {},
+            "is_world_cup_2026": True,
+        }
+    return result
+
+
 TEAMS = {
     572: {
         "name": "Dynamo Kyiv",
@@ -87,14 +127,14 @@ TEAMS = {
             263538: "Єгор Ярмолюк"
         }
     },
-    553: {
-        "name": "Olympiakos Piraeus",
-        "is_ukrainian": False,
-        "youtube_channel_id": "UCLf7YXb-0PWEeq59Z_q318A",
-        "players": {
-            8493: "Роман Яремчук"
-        }
-    },
+    #553: {
+    #    "name": "Olympiakos Piraeus",
+    #    "is_ukrainian": False,
+    #    "youtube_channel_id": "UCLf7YXb-0PWEeq59Z_q318A",
+    #    "players": {
+    #        8493: "Роман Яремчук"
+    #    }
+    #},
     6495: {
         "name": "Podillya Khmelnytskyi",
         "is_ukrainian": True,
@@ -161,6 +201,28 @@ TEAMS = {
         "youtube_channel_id": "UCq7zX_xulgwuukB1cXD4N3w",
         "players": {}
     },
+    80: {
+        "name": "Lyon",
+        "is_ukrainian": False,
+        "youtube_channel_id": "UCzHCZXmqIdjqRnpdp0l_T6g",
+        "players": {
+            8493: "Роман Яремчук"
+        }
+    },
 }
 
-SELECTED_TEAM_IDS = list(TEAMS.keys())
+BASE_SELECTED_TEAM_IDS = list(TEAMS.keys())
+WORLD_CUP_TEAMS = _load_world_cup_teams()
+WORLD_CUP_TEAM_IDS = list(WORLD_CUP_TEAMS.keys())
+TEAMS.update({team_id: data for team_id, data in WORLD_CUP_TEAMS.items() if team_id not in TEAMS})
+
+
+def get_selected_team_ids(day: date | None = None) -> list[int]:
+    day = day or date.today()
+    selected = list(BASE_SELECTED_TEAM_IDS)
+    if WORLD_CUP_START <= day <= WORLD_CUP_END:
+        selected.extend(team_id for team_id in WORLD_CUP_TEAM_IDS if team_id not in selected)
+    return selected
+
+
+SELECTED_TEAM_IDS = get_selected_team_ids()

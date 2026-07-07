@@ -19,6 +19,8 @@ class Container:
         self.bot = bot
         self.api = ApiClient()
 
+        self.redis = None
+
         if USE_REDIS:
             import redis.asyncio as redis
             from infrastructure.storage.redis_adapter import RedisCacheAdapter
@@ -27,6 +29,7 @@ class Container:
                 encoding="utf-8",
                 decode_responses=True
             )
+            self.redis = redis_client
             adapter = RedisCacheAdapter(redis_client)
         else:
             from infrastructure.storage.json_adapter import JsonCacheAdapter
@@ -46,8 +49,9 @@ class Container:
     @classmethod
     def init(cls, bot: Bot):
         if cls._instance is not None:
-            raise RuntimeError("Container вже ініціалізовано")
+            return cls._instance
         cls._instance = cls(bot)
+        return cls._instance
 
     @classmethod
     def get(cls):

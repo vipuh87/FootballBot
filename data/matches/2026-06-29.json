@@ -1,0 +1,5203 @@
+{
+  "get": "fixtures",
+  "parameters": {
+    "date": "2026-06-29"
+  },
+  "errors": [],
+  "results": 48,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "fixture": {
+        "id": 1513184,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T00:00:00+00:00",
+        "timestamp": 1782691200,
+        "periods": {
+          "first": 1782691200,
+          "second": 1782694800
+        },
+        "venue": {
+          "id": null,
+          "name": "Allianz Field",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 909,
+        "name": "MLS Next Pro",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/909.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 18814,
+          "name": "Minnesota United II",
+          "logo": "https://media.api-sports.io/football/teams/18814.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4020,
+          "name": "Tacoma Defiance",
+          "logo": "https://media.api-sports.io/football/teams/4020.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": 4,
+          "away": 1
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1525159,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T00:00:00+00:00",
+        "timestamp": 1782691200,
+        "periods": {
+          "first": 1782691200,
+          "second": 1782694800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 256,
+        "name": "USL League Two",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/256.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 18900,
+          "name": "Miami AC",
+          "logo": "https://media.api-sports.io/football/teams/18900.png",
+          "winner": true
+        },
+        "away": {
+          "id": 21281,
+          "name": "Brevard",
+          "logo": "https://media.api-sports.io/football/teams/21281.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1532323,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T00:00:00+00:00",
+        "timestamp": 1782691200,
+        "periods": {
+          "first": 1782691200,
+          "second": 1782694800
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1117,
+        "name": "USL W League",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/1117.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25849,
+          "name": "Lonestar San Antonio W",
+          "logo": "https://media.api-sports.io/football/teams/25849.png",
+          "winner": false
+        },
+        "away": {
+          "id": 25857,
+          "name": "AHFC Royals W",
+          "logo": "https://media.api-sports.io/football/teams/25857.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 4
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 4
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1544468,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T00:00:00+00:00",
+        "timestamp": 1782691200,
+        "periods": {
+          "first": 1782691200,
+          "second": 1782694800
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Regional de Chinquihue",
+          "city": "Puerto Montt"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
+        }
+      },
+      "league": {
+        "id": 267,
+        "name": "Copa Chile",
+        "country": "Chile",
+        "logo": "https://media.api-sports.io/football/leagues/267.png",
+        "flag": "https://media.api-sports.io/flags/cl.svg",
+        "season": 2026,
+        "round": "Group Stage - 4",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2342,
+          "name": "D. Puerto Montt",
+          "logo": "https://media.api-sports.io/football/teams/2342.png",
+          "winner": true
+        },
+        "away": {
+          "id": 5635,
+          "name": "Concepción",
+          "logo": "https://media.api-sports.io/football/teams/5635.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1532324,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T01:00:00+00:00",
+        "timestamp": 1782694800,
+        "periods": {
+          "first": 1782694800,
+          "second": 1782698400
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1117,
+        "name": "USL W League",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/1117.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 23929,
+          "name": "Albion Colorado W",
+          "logo": "https://media.api-sports.io/football/teams/23929.png",
+          "winner": false
+        },
+        "away": {
+          "id": 23898,
+          "name": "Colorado Storm W",
+          "logo": "https://media.api-sports.io/football/teams/23898.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1532325,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T01:00:00+00:00",
+        "timestamp": 1782694800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Cancelled",
+          "short": "CANC",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1117,
+        "name": "USL W League",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/1117.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25960,
+          "name": "OC Sporting W",
+          "logo": "https://media.api-sports.io/football/teams/25960.png",
+          "winner": null
+        },
+        "away": {
+          "id": 25935,
+          "name": "Capo W",
+          "logo": "https://media.api-sports.io/football/teams/25935.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1513192,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T02:00:00+00:00",
+        "timestamp": 1782698400,
+        "periods": {
+          "first": 1782698400,
+          "second": 1782702000
+        },
+        "venue": {
+          "id": null,
+          "name": "Titan Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 909,
+        "name": "MLS Next Pro",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/909.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 21141,
+          "name": "Los Angeles FC II",
+          "logo": "https://media.api-sports.io/football/teams/21141.png",
+          "winner": true
+        },
+        "away": {
+          "id": 18813,
+          "name": "Houston Dynamo FC II",
+          "logo": "https://media.api-sports.io/football/teams/18813.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1525169,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T02:00:00+00:00",
+        "timestamp": 1782698400,
+        "periods": {
+          "first": 1782698400,
+          "second": 1782702000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 256,
+        "name": "USL League Two",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/256.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 10145,
+          "name": "Academica",
+          "logo": "https://media.api-sports.io/football/teams/10145.png",
+          "winner": true
+        },
+        "away": {
+          "id": 18899,
+          "name": "Marin",
+          "logo": "https://media.api-sports.io/football/teams/18899.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1543588,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T10:00:00+00:00",
+        "timestamp": 1782727200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1031,
+        "name": "Premier League",
+        "country": "Bhutan",
+        "logo": "https://media.api-sports.io/football/leagues/1031.png",
+        "flag": "https://media.api-sports.io/flags/bt.svg",
+        "season": 2026,
+        "round": null,
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 21277,
+          "name": "Tsirang",
+          "logo": "https://media.api-sports.io/football/teams/21277.png",
+          "winner": false
+        },
+        "away": {
+          "id": 9426,
+          "name": "Paro",
+          "logo": "https://media.api-sports.io/football/teams/9426.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567490,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T12:00:00+00:00",
+        "timestamp": 1782734400,
+        "periods": {
+          "first": 1782734400,
+          "second": 1782738000
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2011,
+          "name": "Nizhny Novgorod",
+          "logo": "https://media.api-sports.io/football/teams/2011.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3984,
+          "name": "Tekstilshchik",
+          "logo": "https://media.api-sports.io/football/teams/3984.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 6,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 6,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1508072,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T12:30:00+00:00",
+        "timestamp": 1782736200,
+        "periods": {
+          "first": 1782736200,
+          "second": 1782739800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 390,
+        "name": "Premier League",
+        "country": "Lebanon",
+        "logo": "https://media.api-sports.io/football/leagues/390.png",
+        "flag": "https://media.api-sports.io/flags/lb.svg",
+        "season": 2025,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 11879,
+          "name": "Al Hikma",
+          "logo": "https://media.api-sports.io/football/teams/11879.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4577,
+          "name": "Tadamon Sour",
+          "logo": "https://media.api-sports.io/football/teams/4577.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1538630,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T12:30:00+00:00",
+        "timestamp": 1782736200,
+        "periods": {
+          "first": 1782736200,
+          "second": 1782739800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 391,
+        "name": "Super League",
+        "country": "Malawi",
+        "logo": "https://media.api-sports.io/football/leagues/391.png",
+        "flag": "https://media.api-sports.io/flags/mw.svg",
+        "season": 2026,
+        "round": "Regular Season - 8",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4599,
+          "name": "Nyasa Big Bullets",
+          "logo": "https://media.api-sports.io/football/teams/4599.png",
+          "winner": true
+        },
+        "away": {
+          "id": 27655,
+          "name": "Masters FC",
+          "logo": "https://media.api-sports.io/football/teams/27655.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1508069,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T13:00:00+00:00",
+        "timestamp": 1782738000,
+        "periods": {
+          "first": 1782738000,
+          "second": 1782741600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 390,
+        "name": "Premier League",
+        "country": "Lebanon",
+        "logo": "https://media.api-sports.io/football/leagues/390.png",
+        "flag": "https://media.api-sports.io/flags/lb.svg",
+        "season": 2025,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4570,
+          "name": "Al Nejmeh",
+          "logo": "https://media.api-sports.io/football/teams/4570.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4572,
+          "name": "Racing",
+          "logo": "https://media.api-sports.io/football/teams/4572.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1539842,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T13:00:00+00:00",
+        "timestamp": 1782738000,
+        "periods": {
+          "first": 1782738000,
+          "second": 1782741600
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
+        }
+      },
+      "league": {
+        "id": 1076,
+        "name": "Catarinense U20",
+        "country": "Brazil",
+        "logo": "https://media.api-sports.io/football/leagues/1076.png",
+        "flag": "https://media.api-sports.io/flags/br.svg",
+        "season": 2026,
+        "round": "Regular Season - 12",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13019,
+          "name": "Joinville U20",
+          "logo": "https://media.api-sports.io/football/teams/13019.png",
+          "winner": false
+        },
+        "away": {
+          "id": 23325,
+          "name": "Nação U20",
+          "logo": "https://media.api-sports.io/football/teams/23325.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1546599,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T13:00:00+00:00",
+        "timestamp": 1782738000,
+        "periods": {
+          "first": 1782738000,
+          "second": 1782741600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 405,
+          "name": "Odense",
+          "logo": "https://media.api-sports.io/football/teams/405.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4676,
+          "name": "Kolding IF",
+          "logo": "https://media.api-sports.io/football/teams/4676.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515874,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T15:00:00+00:00",
+        "timestamp": 1782745200,
+        "periods": {
+          "first": 1782745200,
+          "second": 1782748800
+        },
+        "venue": {
+          "id": null,
+          "name": "Skonto stadions",
+          "city": "Riga"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4135,
+          "name": "Auda",
+          "logo": "https://media.api-sports.io/football/teams/4135.png",
+          "winner": false
+        },
+        "away": {
+          "id": 10124,
+          "name": "Riga",
+          "logo": "https://media.api-sports.io/football/teams/10124.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1515875,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T15:00:00+00:00",
+        "timestamp": 1782745200,
+        "periods": {
+          "first": 1782745200,
+          "second": 1782748800
+        },
+        "venue": {
+          "id": null,
+          "name": "Zemgales Olimpiskais centrs",
+          "city": "Jelgava"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 365,
+        "name": "Virsliga",
+        "country": "Latvia",
+        "logo": "https://media.api-sports.io/football/leagues/365.png",
+        "flag": "https://media.api-sports.io/flags/lv.svg",
+        "season": 2026,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 18834,
+          "name": "FS Jelgava",
+          "logo": "https://media.api-sports.io/football/teams/18834.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4138,
+          "name": "Grobiņa",
+          "logo": "https://media.api-sports.io/football/teams/4138.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1543332,
+        "referee": "F. Badstubner",
+        "timezone": "UTC",
+        "date": "2026-06-29T15:00:00+00:00",
+        "timestamp": 1782745200,
+        "periods": {
+          "first": 1782745200,
+          "second": 1782748800
+        },
+        "venue": {
+          "id": null,
+          "name": "The Oval",
+          "city": "Caernarfon"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
+        }
+      },
+      "league": {
+        "id": 493,
+        "name": "UEFA U19 Championship",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/493.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 10338,
+          "name": "Italy U19",
+          "logo": "https://media.api-sports.io/football/teams/10338.png",
+          "winner": true
+        },
+        "away": {
+          "id": 10346,
+          "name": "Serbia U19",
+          "logo": "https://media.api-sports.io/football/teams/10346.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554588,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T15:00:00+00:00",
+        "timestamp": 1782745200,
+        "periods": {
+          "first": 1782745200,
+          "second": 1782748800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 632,
+          "name": "Universitatea Craiova",
+          "logo": "https://media.api-sports.io/football/teams/632.png",
+          "winner": true
+        },
+        "away": {
+          "id": 6496,
+          "name": "Polessya",
+          "logo": "https://media.api-sports.io/football/teams/6496.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1517201,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T15:30:00+00:00",
+        "timestamp": 1782747000,
+        "periods": {
+          "first": 1782747000,
+          "second": 1782750600
+        },
+        "venue": {
+          "id": 2696,
+          "name": "Myyrmaen jalkapallostadion",
+          "city": "Vantaa"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 245,
+        "name": "Ykkönen",
+        "country": "Finland",
+        "logo": "https://media.api-sports.io/football/leagues/245.png",
+        "flag": "https://media.api-sports.io/flags/fi.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6075,
+          "name": "VJS",
+          "logo": "https://media.api-sports.io/football/teams/6075.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2244,
+          "name": "TPV",
+          "logo": "https://media.api-sports.io/football/teams/2244.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547573,
+        "referee": "R. Valikonis",
+        "timezone": "UTC",
+        "date": "2026-06-29T15:30:00+00:00",
+        "timestamp": 1782747000,
+        "periods": {
+          "first": 1782747000,
+          "second": 1782750600
+        },
+        "venue": {
+          "id": null,
+          "name": "Siauliai central stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 362,
+        "name": "A Lyga",
+        "country": "Lithuania",
+        "logo": "https://media.api-sports.io/football/leagues/362.png",
+        "flag": "https://media.api-sports.io/flags/lt.svg",
+        "season": 2026,
+        "round": "Regular Season - 19",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3870,
+          "name": "Šiauliai",
+          "logo": "https://media.api-sports.io/football/teams/3870.png",
+          "winner": false
+        },
+        "away": {
+          "id": 18878,
+          "name": "TransINVEST Vilnius",
+          "logo": "https://media.api-sports.io/football/teams/18878.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1565181,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T15:30:00+00:00",
+        "timestamp": 1782747000,
+        "periods": {
+          "first": 1782747000,
+          "second": 1782750600
+        },
+        "venue": {
+          "id": 11524,
+          "name": "Gol Gohar Sport Complex",
+          "city": "Sirjan"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 290,
+        "name": "Persian Gulf Pro League",
+        "country": "Iran",
+        "logo": "https://media.api-sports.io/football/leagues/290.png",
+        "flag": "https://media.api-sports.io/flags/ir.svg",
+        "season": 2025,
+        "round": "Final",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2714,
+          "name": "Gol Gohar",
+          "logo": "https://media.api-sports.io/football/teams/2714.png",
+          "winner": false
+        },
+        "away": {
+          "id": 20299,
+          "name": "Chadormalu SC",
+          "logo": "https://media.api-sports.io/football/teams/20299.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": 0,
+          "away": 0
+        },
+        "penalty": {
+          "home": 6,
+          "away": 7
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1547574,
+        "referee": "M. Lukjancukas",
+        "timezone": "UTC",
+        "date": "2026-06-29T15:45:00+00:00",
+        "timestamp": 1782747900,
+        "periods": {
+          "first": 1782747900,
+          "second": 1782751500
+        },
+        "venue": {
+          "id": null,
+          "name": "Aukstaitijos Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
+        }
+      },
+      "league": {
+        "id": 362,
+        "name": "A Lyga",
+        "country": "Lithuania",
+        "logo": "https://media.api-sports.io/football/leagues/362.png",
+        "flag": "https://media.api-sports.io/flags/lt.svg",
+        "season": 2026,
+        "round": "Regular Season - 19",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3874,
+          "name": "Panevėžys",
+          "logo": "https://media.api-sports.io/football/teams/3874.png",
+          "winner": false
+        },
+        "away": {
+          "id": 612,
+          "name": "Suduva Marijampole",
+          "logo": "https://media.api-sports.io/football/teams/612.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1548731,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T16:00:00+00:00",
+        "timestamp": 1782748800,
+        "periods": {
+          "first": 1782748800,
+          "second": 1782752400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 598,
+          "name": "FK Crvena Zvezda",
+          "logo": "https://media.api-sports.io/football/teams/598.png",
+          "winner": null
+        },
+        "away": {
+          "id": 656,
+          "name": "Slovan Bratislava",
+          "logo": "https://media.api-sports.io/football/teams/656.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1560476,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T16:00:00+00:00",
+        "timestamp": 1782748800,
+        "periods": {
+          "first": 1782748800,
+          "second": 1782752400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1085,
+          "name": "Akhmat",
+          "logo": "https://media.api-sports.io/football/teams/1085.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3364,
+          "name": "Borac Banja Luka",
+          "logo": "https://media.api-sports.io/football/teams/3364.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562846,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T16:00:00+00:00",
+        "timestamp": 1782748800,
+        "periods": {
+          "first": 1782748800,
+          "second": 1782752400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1426,
+          "name": "CSKA 1948",
+          "logo": "https://media.api-sports.io/football/teams/1426.png",
+          "winner": true
+        },
+        "away": {
+          "id": 573,
+          "name": "FK Partizan",
+          "logo": "https://media.api-sports.io/football/teams/573.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1567489,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T16:00:00+00:00",
+        "timestamp": 1782748800,
+        "periods": {
+          "first": 1782748800,
+          "second": 1782752400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2592,
+          "name": "Arges Pitesti",
+          "logo": "https://media.api-sports.io/football/teams/2592.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3339,
+          "name": "Vllaznia Shkodër",
+          "logo": "https://media.api-sports.io/football/teams/3339.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562344,
+        "date": "2026-06-29T17:00:00+00:00",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "league": {
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6,
+          "name": "Brazil"
+        },
+        "away": {
+          "id": 12,
+          "name": "Japan"
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "video_url": null,
+      "events": {
+        "get": "fixtures/events",
+        "parameters": {
+          "fixture": "1562344"
+        },
+        "errors": [],
+        "results": 17,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "time": {
+              "elapsed": 12,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 33889,
+              "name": "Kaishu Sano"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 14,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 747,
+              "name": "Casemiro"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 29,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 33889,
+              "name": "K. Sano"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 45,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 2601,
+              "name": "Daichi Kamada"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 46,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 1646,
+              "name": "Lucas Paqueta"
+            },
+            "assist": {
+              "id": 377122,
+              "name": "Endrick"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 48,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 618,
+              "name": "Danilo"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 56,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 747,
+              "name": "Casemiro"
+            },
+            "assist": {
+              "id": 22224,
+              "name": "Gabriel"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 66,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 1165,
+              "name": "M. Cunha"
+            },
+            "assist": {
+              "id": 127769,
+              "name": "G. Martinelli"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 66,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 2598,
+              "name": "R. Doan"
+            },
+            "assist": {
+              "id": 32887,
+              "name": "Y. Sugawara"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 66,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 33321,
+              "name": "K. Nakamura"
+            },
+            "assist": {
+              "id": 351014,
+              "name": "J. Suzuki"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 1942,
+              "name": "J. Ito"
+            },
+            "assist": {
+              "id": 106851,
+              "name": "S. Machino"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 78,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 2601,
+              "name": "D. Kamada"
+            },
+            "assist": {
+              "id": 32966,
+              "name": "A. Tanaka"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 84,
+              "extra": null
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 351014,
+              "name": "Junnosuke Suzuki"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Card",
+            "detail": "Yellow Card",
+            "comments": "Foul"
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 3
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 747,
+              "name": "Casemiro"
+            },
+            "assist": {
+              "id": 299,
+              "name": "Fabinho"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 8
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 10135,
+              "name": "Bruno Guimaraes"
+            },
+            "assist": {
+              "id": 275170,
+              "name": "Danilo Santos"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": 7
+            },
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "player": {
+              "id": 33224,
+              "name": "D. Maeda"
+            },
+            "assist": {
+              "id": 33289,
+              "name": "K. Ogawa"
+            },
+            "type": "subst",
+            "detail": "Substitution 5",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 90,
+              "extra": null
+            },
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "player": {
+              "id": 127769,
+              "name": "G. Martinelli"
+            },
+            "assist": {
+              "id": 10135,
+              "name": "Bruno Guimaraes"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          }
+        ]
+      },
+      "statistics": {
+        "get": "fixtures/statistics",
+        "parameters": {
+          "fixture": "1562344"
+        },
+        "errors": [],
+        "results": 2,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png"
+            },
+            "statistics": [
+              {
+                "type": "Shots on Goal",
+                "value": 7
+              },
+              {
+                "type": "Shots off Goal",
+                "value": 6
+              },
+              {
+                "type": "Total Shots",
+                "value": 19
+              },
+              {
+                "type": "Blocked Shots",
+                "value": 6
+              },
+              {
+                "type": "Shots insidebox",
+                "value": 12
+              },
+              {
+                "type": "Shots outsidebox",
+                "value": 7
+              },
+              {
+                "type": "Fouls",
+                "value": 4
+              },
+              {
+                "type": "Corner Kicks",
+                "value": 6
+              },
+              {
+                "type": "Offsides",
+                "value": 1
+              },
+              {
+                "type": "Ball Possession",
+                "value": "69%"
+              },
+              {
+                "type": "Yellow Cards",
+                "value": 2
+              },
+              {
+                "type": "Red Cards",
+                "value": null
+              },
+              {
+                "type": "Goalkeeper Saves",
+                "value": 1
+              },
+              {
+                "type": "Total passes",
+                "value": 682
+              },
+              {
+                "type": "Passes accurate",
+                "value": 625
+              },
+              {
+                "type": "Passes %",
+                "value": "92%"
+              },
+              {
+                "type": "expected_goals",
+                "value": "1.69"
+              },
+              {
+                "type": "goals_prevented",
+                "value": "-0.35"
+              }
+            ]
+          },
+          {
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png"
+            },
+            "statistics": [
+              {
+                "type": "Shots on Goal",
+                "value": 2
+              },
+              {
+                "type": "Shots off Goal",
+                "value": 1
+              },
+              {
+                "type": "Total Shots",
+                "value": 5
+              },
+              {
+                "type": "Blocked Shots",
+                "value": 2
+              },
+              {
+                "type": "Shots insidebox",
+                "value": 2
+              },
+              {
+                "type": "Shots outsidebox",
+                "value": 3
+              },
+              {
+                "type": "Fouls",
+                "value": 13
+              },
+              {
+                "type": "Corner Kicks",
+                "value": 2
+              },
+              {
+                "type": "Offsides",
+                "value": 0
+              },
+              {
+                "type": "Ball Possession",
+                "value": "31%"
+              },
+              {
+                "type": "Yellow Cards",
+                "value": 3
+              },
+              {
+                "type": "Red Cards",
+                "value": null
+              },
+              {
+                "type": "Goalkeeper Saves",
+                "value": 4
+              },
+              {
+                "type": "Total passes",
+                "value": 315
+              },
+              {
+                "type": "Passes accurate",
+                "value": 261
+              },
+              {
+                "type": "Passes %",
+                "value": "83%"
+              },
+              {
+                "type": "expected_goals",
+                "value": "0.23"
+              },
+              {
+                "type": "goals_prevented",
+                "value": "-0.35"
+              }
+            ]
+          }
+        ]
+      },
+      "lineups": {
+        "get": "fixtures/lineups",
+        "parameters": {
+          "fixture": "1562344"
+        },
+        "errors": [],
+        "results": 2,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "team": {
+              "id": 6,
+              "name": "Brazil",
+              "logo": "https://media.api-sports.io/football/teams/6.png",
+              "colors": {
+                "player": {
+                  "primary": "eae380",
+                  "number": "1edb80",
+                  "border": "eae380"
+                },
+                "goalkeeper": {
+                  "primary": "47484d",
+                  "number": "c8d77c",
+                  "border": "47484d"
+                }
+              }
+            },
+            "coach": {
+              "id": 2407,
+              "name": "Carlo Ancelotti",
+              "photo": "https://media.api-sports.io/football/coachs/2407.png"
+            },
+            "formation": "4-3-3",
+            "startXI": [
+              {
+                "player": {
+                  "id": 280,
+                  "name": "Alisson",
+                  "number": 1,
+                  "pos": "G",
+                  "grid": "1:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 618,
+                  "name": "Danilo",
+                  "number": 13,
+                  "pos": "D",
+                  "grid": "2:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 257,
+                  "name": "Marquinhos",
+                  "number": 4,
+                  "pos": "D",
+                  "grid": "2:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 22224,
+                  "name": "Gabriel",
+                  "number": 3,
+                  "pos": "D",
+                  "grid": "2:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 24866,
+                  "name": "Douglas Santos",
+                  "number": 16,
+                  "pos": "D",
+                  "grid": "2:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 10135,
+                  "name": "Bruno Guimaraes",
+                  "number": 8,
+                  "pos": "M",
+                  "grid": "3:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 747,
+                  "name": "Casemiro",
+                  "number": 5,
+                  "pos": "M",
+                  "grid": "3:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 1646,
+                  "name": "Lucas Paqueta",
+                  "number": 20,
+                  "pos": "M",
+                  "grid": "3:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 407806,
+                  "name": "Rayan",
+                  "number": 26,
+                  "pos": "F",
+                  "grid": "4:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 1165,
+                  "name": "M. Cunha",
+                  "number": 9,
+                  "pos": "F",
+                  "grid": "4:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 762,
+                  "name": "Vinicius Junior",
+                  "number": 7,
+                  "pos": "F",
+                  "grid": "4:1"
+                }
+              }
+            ],
+            "substitutes": [
+              {
+                "player": {
+                  "id": 617,
+                  "name": "Ederson",
+                  "number": 23,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 2410,
+                  "name": "Weverton",
+                  "number": 12,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 276,
+                  "name": "Neymar",
+                  "number": 10,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 860,
+                  "name": "Alex Sandro",
+                  "number": 6,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 10124,
+                  "name": "Leo Pereira",
+                  "number": 15,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 30424,
+                  "name": "Ibanez",
+                  "number": 24,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 127769,
+                  "name": "G. Martinelli",
+                  "number": 22,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 10097,
+                  "name": "Ederson",
+                  "number": 2,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 265785,
+                  "name": "Luiz Henrique",
+                  "number": 21,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 377122,
+                  "name": "Endrick",
+                  "number": 19,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 299,
+                  "name": "Fabinho",
+                  "number": 17,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 30497,
+                  "name": "Bremer",
+                  "number": 14,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 196156,
+                  "name": "I. Thiago",
+                  "number": 25,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 275170,
+                  "name": "Danilo Santos",
+                  "number": 18,
+                  "pos": "M",
+                  "grid": null
+                }
+              }
+            ]
+          },
+          {
+            "team": {
+              "id": 12,
+              "name": "Japan",
+              "logo": "https://media.api-sports.io/football/teams/12.png",
+              "colors": {
+                "player": {
+                  "primary": "ffffff",
+                  "number": "050505",
+                  "border": "ffffff"
+                },
+                "goalkeeper": {
+                  "primary": "f3e60e",
+                  "number": "f6f2f2",
+                  "border": "f3e60e"
+                }
+              }
+            },
+            "coach": {
+              "id": 323,
+              "name": "Hajime Moriyasu",
+              "photo": "https://media.api-sports.io/football/coachs/323.png"
+            },
+            "formation": "3-4-2-1",
+            "startXI": [
+              {
+                "player": {
+                  "id": 199578,
+                  "name": "Z. Suzuki",
+                  "number": 1,
+                  "pos": "G",
+                  "grid": "1:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 2597,
+                  "name": "T. Tomiyasu",
+                  "number": 22,
+                  "pos": "D",
+                  "grid": "2:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 32954,
+                  "name": "S. Taniguchi",
+                  "number": 3,
+                  "pos": "D",
+                  "grid": "2:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 32893,
+                  "name": "H. Ito",
+                  "number": 21,
+                  "pos": "D",
+                  "grid": "2:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 2598,
+                  "name": "R. Doan",
+                  "number": 10,
+                  "pos": "M",
+                  "grid": "3:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 33889,
+                  "name": "K. Sano",
+                  "number": 24,
+                  "pos": "M",
+                  "grid": "3:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 2601,
+                  "name": "D. Kamada",
+                  "number": 15,
+                  "pos": "M",
+                  "grid": "3:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 33321,
+                  "name": "K. Nakamura",
+                  "number": 13,
+                  "pos": "M",
+                  "grid": "3:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 1942,
+                  "name": "J. Ito",
+                  "number": 14,
+                  "pos": "F",
+                  "grid": "4:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 33224,
+                  "name": "D. Maeda",
+                  "number": 11,
+                  "pos": "F",
+                  "grid": "4:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 72155,
+                  "name": "A. Ueda",
+                  "number": 18,
+                  "pos": "F",
+                  "grid": "5:1"
+                }
+              }
+            ],
+            "substitutes": [
+              {
+                "player": {
+                  "id": 33034,
+                  "name": "K. Osako",
+                  "number": 12,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 304782,
+                  "name": "T. Hayakawa",
+                  "number": 23,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 440,
+                  "name": "Y. Nagatomo",
+                  "number": 5,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 38114,
+                  "name": "K. Itakura",
+                  "number": 4,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 33165,
+                  "name": "A. Seko",
+                  "number": 20,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 32887,
+                  "name": "Y. Sugawara",
+                  "number": 2,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 106851,
+                  "name": "S. Machino",
+                  "number": 6,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 199143,
+                  "name": "Y. Suzuki",
+                  "number": 17,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 351014,
+                  "name": "J. Suzuki",
+                  "number": 25,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 375930,
+                  "name": "K. Goto",
+                  "number": 9,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 33289,
+                  "name": "K. Ogawa",
+                  "number": 19,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 32966,
+                  "name": "A. Tanaka",
+                  "number": 7,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 32862,
+                  "name": "T. Kubo",
+                  "number": 8,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 32858,
+                  "name": "T. Watanabe",
+                  "number": 16,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 422572,
+                  "name": "K. Shiogai",
+                  "number": 26,
+                  "pos": "F",
+                  "grid": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "id": 1506493,
+        "referee": "J. H. Ellefsen",
+        "timezone": "UTC",
+        "date": "2026-06-29T17:30:00+00:00",
+        "timestamp": 1782754200,
+        "periods": {
+          "first": 1782754200,
+          "second": 1782757800
+        },
+        "venue": {
+          "id": null,
+          "name": "Gundadalur",
+          "city": "Torshavn"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 367,
+        "name": "Meistaradeildin",
+        "country": "Faroe-Islands",
+        "logo": "https://media.api-sports.io/football/leagues/367.png",
+        "flag": "https://media.api-sports.io/flags/fo.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4133,
+          "name": "HB Torshavn",
+          "logo": "https://media.api-sports.io/football/teams/4133.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4191,
+          "name": "Skála",
+          "logo": "https://media.api-sports.io/football/teams/4191.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1506496,
+        "referee": "E. Rasmussen",
+        "timezone": "UTC",
+        "date": "2026-06-29T17:30:00+00:00",
+        "timestamp": 1782754200,
+        "periods": {
+          "first": 1782754200,
+          "second": 1782757800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Gota"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 367,
+        "name": "Meistaradeildin",
+        "country": "Faroe-Islands",
+        "logo": "https://media.api-sports.io/football/leagues/367.png",
+        "flag": "https://media.api-sports.io/flags/fo.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 580,
+          "name": "Vikingur Gota",
+          "logo": "https://media.api-sports.io/football/teams/580.png",
+          "winner": null
+        },
+        "away": {
+          "id": 682,
+          "name": "NSI Runavik",
+          "logo": "https://media.api-sports.io/football/teams/682.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1506497,
+        "referee": "A. Petersen",
+        "timezone": "UTC",
+        "date": "2026-06-29T17:30:00+00:00",
+        "timestamp": 1782754200,
+        "periods": {
+          "first": 1782754200,
+          "second": 1782757800
+        },
+        "venue": {
+          "id": null,
+          "name": "Svangaskard",
+          "city": "Toftir"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 367,
+        "name": "Meistaradeildin",
+        "country": "Faroe-Islands",
+        "logo": "https://media.api-sports.io/football/leagues/367.png",
+        "flag": "https://media.api-sports.io/flags/fo.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4186,
+          "name": "B68",
+          "logo": "https://media.api-sports.io/football/teams/4186.png",
+          "winner": false
+        },
+        "away": {
+          "id": 4184,
+          "name": "AB",
+          "logo": "https://media.api-sports.io/football/teams/4184.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1553799,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T17:45:00+00:00",
+        "timestamp": 1782755100,
+        "periods": {
+          "first": 1782755100,
+          "second": 1782758700
+        },
+        "venue": {
+          "id": 0,
+          "name": "Sabah Al Salem Stadium",
+          "city": "Kuwait"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 2
+        }
+      },
+      "league": {
+        "id": 330,
+        "name": "Premier League",
+        "country": "Kuwait",
+        "logo": "https://media.api-sports.io/football/leagues/330.png",
+        "flag": "https://media.api-sports.io/flags/kw.svg",
+        "season": 2025,
+        "round": "Championship Playoffs - 5",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3532,
+          "name": "Al Arabi",
+          "logo": "https://media.api-sports.io/football/teams/3532.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3533,
+          "name": "Al Fahaheel",
+          "logo": "https://media.api-sports.io/football/teams/3533.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1553800,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T17:45:00+00:00",
+        "timestamp": 1782755100,
+        "periods": {
+          "first": 1782755100,
+          "second": 1782758700
+        },
+        "venue": {
+          "id": 0,
+          "name": "Mohammed Al Hamad Stadium",
+          "city": "Kuwait"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 330,
+        "name": "Premier League",
+        "country": "Kuwait",
+        "logo": "https://media.api-sports.io/football/leagues/330.png",
+        "flag": "https://media.api-sports.io/flags/kw.svg",
+        "season": 2025,
+        "round": "Championship Playoffs - 5",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3537,
+          "name": "Al Qadsia",
+          "logo": "https://media.api-sports.io/football/teams/3537.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3535,
+          "name": "Al Kuwait",
+          "logo": "https://media.api-sports.io/football/teams/3535.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1553801,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T17:45:00+00:00",
+        "timestamp": 1782755100,
+        "periods": {
+          "first": 1782755100,
+          "second": 1782758700
+        },
+        "venue": {
+          "id": 0,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 330,
+        "name": "Premier League",
+        "country": "Kuwait",
+        "logo": "https://media.api-sports.io/football/leagues/330.png",
+        "flag": "https://media.api-sports.io/flags/kw.svg",
+        "season": 2025,
+        "round": "Championship Playoffs - 5",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3540,
+          "name": "Kazma",
+          "logo": "https://media.api-sports.io/football/teams/3540.png",
+          "winner": true
+        },
+        "away": {
+          "id": 3538,
+          "name": "Al Salmiyah",
+          "logo": "https://media.api-sports.io/football/teams/3538.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1499959,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:00:00+00:00",
+        "timestamp": 1782756000,
+        "periods": {
+          "first": 1782756000,
+          "second": 1782759600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 132,
+        "name": "Primera C",
+        "country": "Argentina",
+        "logo": "https://media.api-sports.io/football/leagues/132.png",
+        "flag": "https://media.api-sports.io/flags/ar.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 8374,
+          "name": "Fénix",
+          "logo": "https://media.api-sports.io/football/teams/8374.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1955,
+          "name": "General Lamadrid",
+          "logo": "https://media.api-sports.io/football/teams/1955.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1499965,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:00:00+00:00",
+        "timestamp": 1782756000,
+        "periods": {
+          "first": 1782756000,
+          "second": 1782759600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 132,
+        "name": "Primera C",
+        "country": "Argentina",
+        "logo": "https://media.api-sports.io/football/leagues/132.png",
+        "flag": "https://media.api-sports.io/flags/ar.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1931,
+          "name": "Sportivo Barracas",
+          "logo": "https://media.api-sports.io/football/teams/1931.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1958,
+          "name": "Lujan",
+          "logo": "https://media.api-sports.io/football/teams/1958.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1549946,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:00:00+00:00",
+        "timestamp": 1782756000,
+        "periods": {
+          "first": 1782756000,
+          "second": 1782759600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1067,
+        "name": "Torneo Promocional Amateur",
+        "country": "Argentina",
+        "logo": "https://media.api-sports.io/football/leagues/1067.png",
+        "flag": "https://media.api-sports.io/flags/ar.svg",
+        "season": 2026,
+        "round": "Regular Season - 5",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 23103,
+          "name": "Juventud de Bernal",
+          "logo": "https://media.api-sports.io/football/teams/23103.png",
+          "winner": false
+        },
+        "away": {
+          "id": 23098,
+          "name": "Deportivo Metalurgico",
+          "logo": "https://media.api-sports.io/football/teams/23098.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 5
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 5
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1553075,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:00:00+00:00",
+        "timestamp": 1782756000,
+        "periods": {
+          "first": 1782756000,
+          "second": 1782759600
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Arequipa"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
+        }
+      },
+      "league": {
+        "id": 1232,
+        "name": "Copa De La Liga",
+        "country": "Peru",
+        "logo": "https://media.api-sports.io/football/leagues/1232.png",
+        "flag": "https://media.api-sports.io/flags/pe.svg",
+        "season": 2026,
+        "round": "Group Stage - 3",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2554,
+          "name": "FBC Melgar",
+          "logo": "https://media.api-sports.io/football/teams/2554.png",
+          "winner": null
+        },
+        "away": {
+          "id": 22489,
+          "name": "UCV Moquegua",
+          "logo": "https://media.api-sports.io/football/teams/22489.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1508071,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:30:00+00:00",
+        "timestamp": 1782757800,
+        "periods": {
+          "first": 1782757800,
+          "second": 1782761400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 390,
+        "name": "Premier League",
+        "country": "Lebanon",
+        "logo": "https://media.api-sports.io/football/leagues/390.png",
+        "flag": "https://media.api-sports.io/flags/lb.svg",
+        "season": 2025,
+        "round": "Regular Season - 21",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 11880,
+          "name": "Al Mabarrah",
+          "logo": "https://media.api-sports.io/football/teams/11880.png",
+          "winner": false
+        },
+        "away": {
+          "id": 4569,
+          "name": "Al Ansar",
+          "logo": "https://media.api-sports.io/football/teams/4569.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 7
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 4
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 7
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1562847,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T18:45:00+00:00",
+        "timestamp": 1782758700,
+        "periods": {
+          "first": 1782758700,
+          "second": 1782762300
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 667,
+        "name": "Friendlies Clubs",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/667.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Club Friendlies",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 5343,
+          "name": "H&W Welders",
+          "logo": "https://media.api-sports.io/football/teams/5343.png",
+          "winner": false
+        },
+        "away": {
+          "id": 5354,
+          "name": "Larne",
+          "logo": "https://media.api-sports.io/football/teams/5354.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1543333,
+        "date": "2026-06-29T19:00:00+00:00",
+        "status": {
+          "short": "FT"
+        }
+      },
+      "league": {
+        "id": 493,
+        "name": "UEFA U19 Championship",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/493.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 10329,
+          "name": "Croatia U19"
+        },
+        "away": {
+          "id": 10352,
+          "name": "Ukraine U19"
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 3
+      },
+      "video_url": null,
+      "events": {
+        "get": "fixtures/events",
+        "parameters": {
+          "fixture": "1543333"
+        },
+        "errors": [],
+        "results": 12,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "time": {
+              "elapsed": 22,
+              "extra": null
+            },
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png"
+            },
+            "player": {
+              "id": 448469,
+              "name": "I. Baric"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Penalty",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 26,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 440136,
+              "name": "D. Bogdanov"
+            },
+            "assist": {
+              "id": 652731,
+              "name": "P. Lyusin"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 48,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 619996,
+              "name": "N. Kaliuzhnyi"
+            },
+            "assist": {
+              "id": null,
+              "name": null
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 57,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 652731,
+              "name": "P. Lyusin"
+            },
+            "assist": {
+              "id": 626590,
+              "name": "P. Sykut"
+            },
+            "type": "Goal",
+            "detail": "Normal Goal",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 58,
+              "extra": null
+            },
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png"
+            },
+            "player": {
+              "id": 448469,
+              "name": "I. Baric"
+            },
+            "assist": {
+              "id": 494323,
+              "name": "T. Kusanovic"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 58,
+              "extra": null
+            },
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png"
+            },
+            "player": {
+              "id": 586074,
+              "name": "L. Chelfi"
+            },
+            "assist": {
+              "id": 394910,
+              "name": "T. Bakovic"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 58,
+              "extra": null
+            },
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png"
+            },
+            "player": {
+              "id": 448492,
+              "name": "M. Subotic"
+            },
+            "assist": {
+              "id": 620936,
+              "name": "M. Zrilic"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 70,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 619996,
+              "name": "N. Kaliuzhnyi"
+            },
+            "assist": {
+              "id": 452409,
+              "name": "B. Popov"
+            },
+            "type": "subst",
+            "detail": "Substitution 1",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 70,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 626590,
+              "name": "P. Sykut"
+            },
+            "assist": {
+              "id": 461636,
+              "name": "V. Glyut"
+            },
+            "type": "subst",
+            "detail": "Substitution 2",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 493645,
+              "name": "O. Kamensky"
+            },
+            "assist": {
+              "id": 580648,
+              "name": "S. Ignatkov"
+            },
+            "type": "subst",
+            "detail": "Substitution 3",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png"
+            },
+            "player": {
+              "id": 431182,
+              "name": "Y. Kokodynyak"
+            },
+            "assist": {
+              "id": 606485,
+              "name": "K. Hubenko"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          },
+          {
+            "time": {
+              "elapsed": 79,
+              "extra": null
+            },
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png"
+            },
+            "player": {
+              "id": 448468,
+              "name": "P. Covic"
+            },
+            "assist": {
+              "id": 583670,
+              "name": "K. Simic"
+            },
+            "type": "subst",
+            "detail": "Substitution 4",
+            "comments": null
+          }
+        ]
+      },
+      "lineups": {
+        "get": "fixtures/lineups",
+        "parameters": {
+          "fixture": "1543333"
+        },
+        "errors": [],
+        "results": 2,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "team": {
+              "id": 10329,
+              "name": "Croatia U19",
+              "logo": "https://media.api-sports.io/football/teams/10329.png",
+              "colors": null
+            },
+            "coach": {
+              "id": 3337,
+              "name": "S. Oreščanin",
+              "photo": "https://media.api-sports.io/football/coachs/3337.png"
+            },
+            "formation": null
+          },
+          {
+            "team": {
+              "id": 10352,
+              "name": "Ukraine U19",
+              "logo": "https://media.api-sports.io/football/teams/10352.png",
+              "colors": null
+            },
+            "coach": {
+              "id": 1258,
+              "name": "D. Mykhailenko",
+              "photo": "https://media.api-sports.io/football/coachs/1258.png"
+            },
+            "formation": null
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "id": 1508795,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T19:15:00+00:00",
+        "timestamp": 1782760500,
+        "periods": {
+          "first": 1782760500,
+          "second": 1782764100
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Akranes"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
+        }
+      },
+      "league": {
+        "id": 164,
+        "name": "Úrvalsdeild",
+        "country": "Iceland",
+        "logo": "https://media.api-sports.io/football/leagues/164.png",
+        "flag": "https://media.api-sports.io/flags/is.svg",
+        "season": 2026,
+        "round": "Regular Season - 12",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 827,
+          "name": "IA Akranes",
+          "logo": "https://media.api-sports.io/football/teams/827.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2117,
+          "name": "Fram Reykjavik",
+          "logo": "https://media.api-sports.io/football/teams/2117.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1514201,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T19:15:00+00:00",
+        "timestamp": 1782760500,
+        "periods": {
+          "first": 1782760500,
+          "second": 1782764100
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Mosfellsbaer"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 165,
+        "name": "1. Deild",
+        "country": "Iceland",
+        "logo": "https://media.api-sports.io/football/leagues/165.png",
+        "flag": "https://media.api-sports.io/flags/is.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3514,
+          "name": "Afturelding",
+          "logo": "https://media.api-sports.io/football/teams/3514.png",
+          "winner": true
+        },
+        "away": {
+          "id": 4167,
+          "name": "Ægir",
+          "logo": "https://media.api-sports.io/football/teams/4167.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 8,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 8,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1553076,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T20:15:00+00:00",
+        "timestamp": 1782764100,
+        "periods": {
+          "first": 1782764100,
+          "second": 1782767700
+        },
+        "venue": {
+          "id": 1233,
+          "name": "Estadio Inca Garcilaso de la Vega",
+          "city": "Cusco"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
+        }
+      },
+      "league": {
+        "id": 1232,
+        "name": "Copa De La Liga",
+        "country": "Peru",
+        "logo": "https://media.api-sports.io/football/leagues/1232.png",
+        "flag": "https://media.api-sports.io/flags/pe.svg",
+        "season": 2026,
+        "round": "Group Stage - 3",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 20960,
+          "name": "Deportivo Garcilaso",
+          "logo": "https://media.api-sports.io/football/teams/20960.png",
+          "winner": true
+        },
+        "away": {
+          "id": 2550,
+          "name": "Deportivo Binacional",
+          "logo": "https://media.api-sports.io/football/teams/2550.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 4,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 4,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1565176,
+        "date": "2026-06-29T20:30:00+00:00",
+        "status": {
+          "short": "PEN"
+        }
+      },
+      "league": {
+        "id": 1,
+        "name": "World Cup",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/1.png",
+        "flag": null,
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25,
+          "name": "Germany"
+        },
+        "away": {
+          "id": 2380,
+          "name": "Paraguay"
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "video_url": null,
+      "lineups": {
+        "get": "fixtures/lineups",
+        "parameters": {
+          "fixture": "1565176"
+        },
+        "errors": [],
+        "results": 2,
+        "paging": {
+          "current": 1,
+          "total": 1
+        },
+        "response": [
+          {
+            "team": {
+              "id": 25,
+              "name": "Germany",
+              "logo": "https://media.api-sports.io/football/teams/25.png",
+              "colors": {
+                "player": {
+                  "primary": "ffffff",
+                  "number": "000000",
+                  "border": "ffffff"
+                },
+                "goalkeeper": {
+                  "primary": "4f9b9c",
+                  "number": "ecede8",
+                  "border": "4f9b9c"
+                }
+              }
+            },
+            "formation": "4-4-2",
+            "startXI": [
+              {
+                "player": {
+                  "id": 497,
+                  "name": "Manuel Neuer",
+                  "number": 1,
+                  "pos": "G",
+                  "grid": "1:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 502,
+                  "name": "Joshua Kimmich",
+                  "number": 6,
+                  "pos": "D",
+                  "grid": "2:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 972,
+                  "name": "Jonathan Tah",
+                  "number": 4,
+                  "pos": "D",
+                  "grid": "2:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 2285,
+                  "name": "Antonio Rüdiger",
+                  "number": 2,
+                  "pos": "D",
+                  "grid": "2:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 280074,
+                  "name": "Nathaniel Brown",
+                  "number": 18,
+                  "pos": "D",
+                  "grid": "2:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 644,
+                  "name": "Leroy Sané",
+                  "number": 19,
+                  "pos": "M",
+                  "grid": "3:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 637,
+                  "name": "Felix Nmecha",
+                  "number": 23,
+                  "pos": "M",
+                  "grid": "3:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 328033,
+                  "name": "Aleksandar Pavlović",
+                  "number": 5,
+                  "pos": "M",
+                  "grid": "3:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 203224,
+                  "name": "Florian Wirtz",
+                  "number": 17,
+                  "pos": "M",
+                  "grid": "3:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 978,
+                  "name": "Kai Havertz",
+                  "number": 7,
+                  "pos": "F",
+                  "grid": "4:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 26475,
+                  "name": "Deniz Undav",
+                  "number": 26,
+                  "pos": "F",
+                  "grid": "4:1"
+                }
+              }
+            ],
+            "substitutes": [
+              {
+                "player": {
+                  "id": 511,
+                  "name": "Leon Goretzka",
+                  "number": 8,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 181812,
+                  "name": "Jamal Musiala",
+                  "number": 10,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 25368,
+                  "name": "Waldemar Anton",
+                  "number": 3,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 158054,
+                  "name": "Nick Woltemade",
+                  "number": 11,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 163189,
+                  "name": "Malick Thiaw",
+                  "number": 24,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 714,
+                  "name": "Nadiem Amiri",
+                  "number": 20,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 399,
+                  "name": "Alexander Nübel",
+                  "number": 21,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 702,
+                  "name": "Oliver Baumann",
+                  "number": 12,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 25158,
+                  "name": "David Raum",
+                  "number": 22,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 18970,
+                  "name": "Pascal Groß",
+                  "number": 13,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 137210,
+                  "name": "Angelo Stiller",
+                  "number": 16,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 380978,
+                  "name": "Assan Ouédraogo",
+                  "number": 25,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 128533,
+                  "name": "Jamie Leweling",
+                  "number": 9,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 158644,
+                  "name": "Maximilian Beier",
+                  "number": 14,
+                  "pos": "F",
+                  "grid": null
+                }
+              }
+            ],
+            "coach": {
+              "id": 1545,
+              "name": "Julian Nagelsmann",
+              "photo": "https://media.api-sports.io/football/coachs/1545.png"
+            }
+          },
+          {
+            "team": {
+              "id": 2380,
+              "name": "Paraguay",
+              "logo": "https://media.api-sports.io/football/teams/2380.png",
+              "colors": {
+                "player": {
+                  "primary": "252633",
+                  "number": "ffffff",
+                  "border": "252633"
+                },
+                "goalkeeper": {
+                  "primary": "f09c3e",
+                  "number": "0a0a0a",
+                  "border": "f09c3e"
+                }
+              }
+            },
+            "formation": "4-4-2",
+            "startXI": [
+              {
+                "player": {
+                  "id": 70852,
+                  "name": "Orlando Gill",
+                  "number": 12,
+                  "pos": "G",
+                  "grid": "1:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 195992,
+                  "name": "Juan Cáceres",
+                  "number": 4,
+                  "pos": "D",
+                  "grid": "2:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 2502,
+                  "name": "Gustavo Gómez",
+                  "number": 15,
+                  "pos": "D",
+                  "grid": "2:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 70732,
+                  "name": "José Canale",
+                  "number": 13,
+                  "pos": "D",
+                  "grid": "2:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 2499,
+                  "name": "Junior Alonso",
+                  "number": 6,
+                  "pos": "D",
+                  "grid": "2:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 2507,
+                  "name": "Miguel Almirón",
+                  "number": 10,
+                  "pos": "M",
+                  "grid": "3:4"
+                }
+              },
+              {
+                "player": {
+                  "id": 195107,
+                  "name": "Damián Bobadilla",
+                  "number": 16,
+                  "pos": "M",
+                  "grid": "3:3"
+                }
+              },
+              {
+                "player": {
+                  "id": 6236,
+                  "name": "Andrés Cubas",
+                  "number": 14,
+                  "pos": "M",
+                  "grid": "3:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 305832,
+                  "name": "Matías Galarza",
+                  "number": 23,
+                  "pos": "M",
+                  "grid": "3:1"
+                }
+              },
+              {
+                "player": {
+                  "id": 6483,
+                  "name": "Gabriel Ávalos",
+                  "number": 21,
+                  "pos": "F",
+                  "grid": "4:2"
+                }
+              },
+              {
+                "player": {
+                  "id": 70747,
+                  "name": "Julio Enciso",
+                  "number": 19,
+                  "pos": "F",
+                  "grid": "4:1"
+                }
+              }
+            ],
+            "substitutes": [
+              {
+                "player": {
+                  "id": 119128,
+                  "name": "Gustavo Caballero",
+                  "number": 24,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 106485,
+                  "name": "Mauricio",
+                  "number": 11,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 35808,
+                  "name": "Gustavo Velázquez",
+                  "number": 2,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 70767,
+                  "name": "Braian Ojeda",
+                  "number": 20,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 2522,
+                  "name": "Antonio Sanabria",
+                  "number": 9,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 2500,
+                  "name": "Fabián Balbuena",
+                  "number": 5,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 51733,
+                  "name": "Gastón Olveira",
+                  "number": 22,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 2497,
+                  "name": "Roberto Fernández",
+                  "number": 1,
+                  "pos": "G",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 6168,
+                  "name": "Omar Alderete",
+                  "number": 3,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 425020,
+                  "name": "Alexandro Maidana",
+                  "number": 26,
+                  "pos": "D",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 2514,
+                  "name": "Alejandro Romero",
+                  "number": 17,
+                  "pos": "M",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 196298,
+                  "name": "Ramón Sosa",
+                  "number": 7,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 95460,
+                  "name": "Alex Arce",
+                  "number": 18,
+                  "pos": "F",
+                  "grid": null
+                }
+              },
+              {
+                "player": {
+                  "id": 70670,
+                  "name": "Isidro Pitta",
+                  "number": 25,
+                  "pos": "F",
+                  "grid": null
+                }
+              }
+            ],
+            "coach": {
+              "id": 861,
+              "name": "Gustavo Alfaro",
+              "photo": "https://media.api-sports.io/football/coachs/861.png"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "id": 1554052,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T22:00:00+00:00",
+        "timestamp": 1782770400,
+        "periods": {
+          "first": 1782770400,
+          "second": 1782774000
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Jose Mammoud Abbas",
+          "city": "Governador Valadares"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 76,
+        "name": "Serie D",
+        "country": "Brazil",
+        "logo": "https://media.api-sports.io/football/leagues/76.png",
+        "flag": "https://media.api-sports.io/flags/br.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13080,
+          "name": "Democrata GV",
+          "logo": "https://media.api-sports.io/football/teams/13080.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10687,
+          "name": "Ivinhema",
+          "logo": "https://media.api-sports.io/football/teams/10687.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1524564,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T22:30:00+00:00",
+        "timestamp": 1782772200,
+        "periods": {
+          "first": 1782772200,
+          "second": 1782775800
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 256,
+        "name": "USL League Two",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/256.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Group Stage",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 10094,
+          "name": "Asheville City",
+          "logo": "https://media.api-sports.io/football/teams/10094.png",
+          "winner": true
+        },
+        "away": {
+          "id": 10096,
+          "name": "Charlotte Independence 2",
+          "logo": "https://media.api-sports.io/football/teams/10096.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1544469,
+        "referee": null,
+        "timezone": "UTC",
+        "date": "2026-06-29T23:30:00+00:00",
+        "timestamp": 1782775800,
+        "periods": {
+          "first": 1782775800,
+          "second": 1782779400
+        },
+        "venue": {
+          "id": 342,
+          "name": "Estadio Santa Laura-Universidad SEK",
+          "city": "Santiago de Chile"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
+        }
+      },
+      "league": {
+        "id": 267,
+        "name": "Copa Chile",
+        "country": "Chile",
+        "logo": "https://media.api-sports.io/football/leagues/267.png",
+        "flag": "https://media.api-sports.io/flags/cl.svg",
+        "season": 2026,
+        "round": "Group Stage - 4",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2321,
+          "name": "Union Espanola",
+          "logo": "https://media.api-sports.io/football/teams/2321.png",
+          "winner": false
+        },
+        "away": {
+          "id": 2315,
+          "name": "Colo Colo",
+          "logo": "https://media.api-sports.io/football/teams/2315.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 3
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 3
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
+}

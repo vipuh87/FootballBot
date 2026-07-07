@@ -1,9 +1,15 @@
 import os
 from zoneinfo import ZoneInfo
+from dotenv import load_dotenv
 
-API_SPORTS_KEY = os.getenv("API_SPORTS_KEY", "db298b866891a40645b145c9dd202cfe")
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "AIzaSyBaYsXvFLHytr2hHHECF1bI4wvVXTHrMcw")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7986237119:AAGE2J03qPLAWQFzc5KarNSbCSZwH1o0qIU")
+load_dotenv()
+
+API_SPORTS_KEY = os.getenv("API_SPORTS_KEY", "")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "").rstrip("/")
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "")
+CRON_SECRET = os.getenv("CRON_SECRET", "")
 
 API_SPORTS_BASE = "https://v3.football.api-sports.io"
 
@@ -39,8 +45,8 @@ MIN_REQUESTS_TO_ALLOW_MANUAL = int(os.getenv("MIN_REQUESTS_TO_ALLOW_MANUAL", "10
 
 HEADERS = {"x-apisports-key": API_SPORTS_KEY}
 
-USE_REDIS=False          # false — JSON, true — Redis
-REDIS_URL="redis://localhost:6379/0"  # або твій Redis URL
+USE_REDIS = os.getenv("USE_REDIS", "false").lower() == "true"
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 
 # Нагадування перед матчем (в хвилинах до початку)
 REMINDER_MINUTES_BEFORE = 15
